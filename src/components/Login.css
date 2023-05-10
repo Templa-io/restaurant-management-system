@@ -1,0 +1,60 @@
+.Login{
+    display: flex;
+    height: 100vh;
+   
+    overflow: hidden;
+}
+.Left{
+    flex: 1;
+    background-image: url(../assets/img.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    align-items:start;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    padding: 2rem;
+}
+
+.Right{
+    flex: 1;
+}
+.Header{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+     width: 1rem;
+     padding-bottom: 0.5rem;
+}
+.description{
+    color: white;
+}
+.description >:nth-child(1){
+    width:12rem;
+}
+.description >:nth-child(2){
+    width: 15rem;
+    padding-bottom: 1rem;
+}
+.boxes{
+    display: flex;
+    gap: 1rem;
+}
+.boxes > div:nth-child(1){
+    background-color: black;
+    width: 7rem;
+    height: 1rem;
+    border-radius: 2rem;
+}
+.boxes > div:nth-child(2){
+    background-color: white;
+    width: 7rem;
+    height: 1rem;
+    border-radius: 2rem;
+}
+.boxes > div:nth-child(3){
+    background-color: white;
+    width: 7rem;
+    height: 1rem;
+    border-radius: 2rem;
+}
