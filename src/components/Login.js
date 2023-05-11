@@ -5,9 +5,11 @@ const Login = () => {
   return (
     <div className='Login'>
         <div className='Left'>
-            <div className='vector'>
+            
             <div className='Header'>
-                <div>Restaurant Management System</div>
+                <div>Restaurant </div>
+                    <div>Management</div>
+                    <div> System</div>
             </div>
 
             <div className='description'>
@@ -19,8 +21,8 @@ const Login = () => {
                 <div></div>
                 <div></div>
             </div>
-            </div>
-        </div>
+            
+        </div><div className='blur hero-blur'></div>
         <div className='Right'></div>
     </div>
   )
