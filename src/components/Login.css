@@ -81,13 +81,13 @@ left: 0;
 }
 .blur{
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    filter: blur(15px);
+    background: rgba(0, 0, 0, 0.6);
+    filter: blur(20px);
    z-index: 1;
-  border-top-left-radius: 40%;
-  border-top-right-radius: 40%;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
    box-shadow:   
-   0px 50px black, 
+   0 100px black, 
    -7px 0 4px 3px black, 
    0 0 4px 20px black; ;
 
