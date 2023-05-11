@@ -23,7 +23,51 @@ const Login = () => {
             </div>
             
         </div><div className='blur hero-blur'></div>
-        <div className='Right'></div>
+        <div className='Right'>
+            
+            
+        <form className="signin">
+            <span>Login</span>
+            <div>
+                <label htmlFor='email'>Username or Email</label>
+                <input
+                  type="text"
+                  name="email"
+                /> 
+            </div>
+           <div><label htmlFor='password'>Password</label>
+                <input
+                  type="password"
+                  required
+                  // {...register("password", {
+                  //   required: "Password do not match",
+                  //   minLength: {
+                  //     minLength: {
+                  //       value: 8,
+                  //       message: "Password must be at least 8 characters long",
+                  //     },
+                  //     maxLength: {
+                  //       value: 20,
+                  //       message: "Password must be at most 20 characters long",
+                  //     },
+                  //   },
+                  //   validate: (value) => {
+                  //     return (
+                  //       value === watch("password") || "Password do not match"
+                  //     );
+                  //   },
+                  // })}
+                />
+                </div>
+                
+                {/* {errors.password && (
+                  <span className="errorMsg">{errors.password.message}</span>
+                )} */}
+
+                <div><input type={"submit"} value="LOGIN" className="btn" /></div>
+                {/* <input type={"submit"} value="LOGIN" className="button1" /> */}
+              </form>
+        </div>
     </div>
   )
 }
