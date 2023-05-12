@@ -147,7 +147,21 @@ color: black;
     display: flex;
     justify-content: space-between;
 }
+.admin > div:nth-child(1){
+    width: 20px;
+}
 .admin > img {
-    width: 3rem;
-    border-radius: 10rem;
+    width: 4rem;
+    border-radius: 20rem;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 45rem;
+    
+}
+.profile > div:nth-child(1){
+    font-weight: bold;
 }

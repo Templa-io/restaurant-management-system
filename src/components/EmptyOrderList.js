@@ -51,7 +51,7 @@ const EmptyOrderList = () => {
                 <div>admin</div>
 <div>admin@gmail.com</div>
             </div>
-            <div> <img src={image7} alt=''/></div>
+             <img src={image7} alt=''/>
            
         </div>
        </div>
