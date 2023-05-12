@@ -8,6 +8,7 @@ import image5 from '../assets/Ellipse 68.png'
 import image6 from '../assets/Ellipse 69.png'
 import image7 from '../assets/Image (2).png'
 
+
 const EmptyOrderList = () => {
   return (
     <div className='Hero'>
@@ -54,6 +55,19 @@ const EmptyOrderList = () => {
              <img src={image7} alt=''/>
            
         </div>
+        <div className='container'>
+              <div className='active-orders'>
+            <div>No Active Orders</div>
+            <div>All active oders will appear here</div>
+            <img src={image1} alt=''/>
+        </div>
+        <div className='order-details'>
+            <div>Order Details</div>
+            <div>order details will display here</div>
+            <img src={image1} alt=''/>
+        </div>
+        </div>
+      
        </div>
     </div>
   )
