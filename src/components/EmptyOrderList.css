@@ -1,0 +1,153 @@
+.Hero{
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+.Hero-left{
+    flex: 1 ;
+    flex-direction: column;
+    background-color: #E6EEFF;
+    padding: 16px;
+}
+
+.Hero-left >div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    line-height: 20px;
+}
+.orders{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 4rem;
+}
+
+.orders > div > img{
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.orders > div:nth-child(3){
+display: flex;
+color:#8E97B6 ;
+gap: 5px;
+}
+.orders > div:nth-child(2){
+    display: flex;
+    color:#8E97B6 ;
+    gap: 5px;
+    }
+.orders > div:nth-child(1){
+        display: flex;
+        gap: 2px;
+        }
+
+
+
+.num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 1px 8px;
+    border-radius: 16px;
+}
+.menu{
+    display: flex;
+    margin-top: 10rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    padding-left: 16px;
+    border-radius: 30px;
+    width: 14rem;
+    margin-left: 3rem;
+    gap: 12px;
+    height: 15rem;
+
+    
+}
+.menu > div > img {
+    width: 40px;
+    padding: 2px;
+}
+
+.menu > div > img:nth-child(1) {
+    width: 40px;
+    position:absolute;
+    padding: 4px;
+    background-color: white;
+    border-radius: 24px;
+    left: 9rem;
+   z-index: 3;
+}
+.menu > div > img:nth-child(2) {
+    width: 40px;
+    position:absolute;
+    padding: 4px;
+    background-color: white;
+    border-radius: 24px;
+    left: 10rem;
+    z-index: 2;
+}
+.menu > div > img:nth-child(3) {
+    width: 40px;
+    position:absolute;
+    padding: 4px;
+    background-color: white;
+    border-radius: 24px;
+    left: 11rem;
+    z-index: 1;
+   
+}
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.menu > div:nth-child(2){
+    font-size: 15px;
+    width: 10rem;
+    padding-top: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.menu-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: black;
+    color: white;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 20px;
+    margin-left: 1rem;
+    margin-top: 24px;
+
+}
+.menu-button:hover{
+cursor: pointer;
+background-color: orange;
+border: none;
+color: black;
+}
+.Hero-right{
+    display: flex;
+    flex-direction: column;
+   flex: 3;
+   padding: 1rem;
+}
+.admin{
+    display: flex;
+    justify-content: space-between;
+}
+.admin > img {
+    width: 3rem;
+    border-radius: 10rem;
+}

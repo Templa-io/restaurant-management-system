@@ -27,7 +27,7 @@ const Login = () => {
             
             
         <form className="signin">
-            <span>Login</span>
+            <span className='text'>Login</span>
             <div>
                 <label htmlFor='email'>Username or Email</label>
                 <input

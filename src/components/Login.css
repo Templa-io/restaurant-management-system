@@ -127,6 +127,11 @@ button {
     width: 26.5rem;
     margin-top: 20px;
   }
+  .btn:hover {
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+  }
 
   span{
     padding-right: 20rem;
