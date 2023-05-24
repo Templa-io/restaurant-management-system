@@ -1,6 +1,6 @@
 import React from 'react'
 import './ComponentRight.css'
-import image7 from '../assets/Image (2).png'
+import image7 from '../../assets/Image (2).png'
 
 
 const ComponentRight = () => {
