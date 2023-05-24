@@ -3,7 +3,7 @@ import './OrderList.css'
 
 import EmptyOrderList from './EmptyOrderList'
 import LeftComponent from './LeftComponent'
-import ComponentRight from '../sub-comonents/ComponentRight'
+import ComponentRight from '../subComponents/ComponentRight'
 import { orderData } from './data/OrderData'
 import image1 from '../assets/Rectangle 121.png'
 
