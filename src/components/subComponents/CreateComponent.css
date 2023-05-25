@@ -1,7 +1,7 @@
 .custom-input {
     /* Add your styling rules here */
     padding: 10px;
-    font-size: 16px;
+    font-size: 12px;
     width: 20rem;
    border: none;
     /* ...other styles */
@@ -16,11 +16,12 @@
   }
   textarea{
     background-color: #E6EEFF ;;
+    width: 21rem;
     border-radius: 12px;
     border: none;
   }
   .label{
-    font-size: 16px;
+    font-size: 12px;
     text-align: left;
     color: black;
     font-weight:400;
@@ -70,14 +71,17 @@ border: 1px solid #E6EEFF ;
   .img-box > img:hover{
     cursor: pointer;
   }
+  .img-box > div {
+    font-size: 12px;
+  }
 
-  .menu-box > div:nth-child(1){
+  .Order-details > div:nth-child(1){
     font-weight: bold;
     font-size: 20px;
     width: 1rem;
     margin-top: -1rem;
-    padding-bottom: 1rem;
-
+    align-self: flex-start;
+    padding-left: 1rem;
   }
   form> div:nth-child(1){
     margin-top: -0.5rem;
