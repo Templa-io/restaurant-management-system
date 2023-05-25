@@ -3,6 +3,7 @@ import EmptyOrderList from './components/EmptyOrderList';
 import Login from './components/Login';
 import OrderList from './components/OrderList';
 import EmptyMenu from './components/EmptyMenu';
+import MenuList from './components/MenuList';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
     {/* <Login/> */}
     {/*<EmptyOrderList/>*/}
 {/*<OrderList/>*/}
-<EmptyMenu/>
+{/*<EmptyMenu/>*/}
+<MenuList/>
     </div>
   );
 }

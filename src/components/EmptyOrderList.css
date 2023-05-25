@@ -184,8 +184,9 @@ color: black;
 }
 .container{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
+   
 }
 .active-orders{
     display: flex;

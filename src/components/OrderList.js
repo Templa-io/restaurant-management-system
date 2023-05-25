@@ -1,7 +1,6 @@
 import React from 'react'
 import './OrderList.css'
 
-import EmptyOrderList from './EmptyOrderList'
 import LeftComponent from './LeftComponent'
 import ComponentRight from '../components/subComponents/ComponentRight'
 import { orderData } from './data/OrderData'
