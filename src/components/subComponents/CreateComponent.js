@@ -15,7 +15,7 @@ const onSubmit = (data) => {
 
   return (
     <div className='Order-details'>
-    <div className='menu-box'>
+   
     <div>Create Menu.</div>
     <form>
     <div>
@@ -39,7 +39,7 @@ const onSubmit = (data) => {
    <div><input type={"submit"} className='custom-btn' value="Create"/></div>
     
     </form>
-    </div>
+   
     </div>
   )
 }
