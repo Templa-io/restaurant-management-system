@@ -30,7 +30,9 @@ const onSubmit = (data) => {
     <label className='label'> Price </label>
     <input type="text" className='custom-input'/>
     </div>
+    <div><label className='label'> Image </label></div>
    <div className='img-box'>
+   
    <img src={image1} alt=''/>
    <div>Attach an image </div>
    </div>
