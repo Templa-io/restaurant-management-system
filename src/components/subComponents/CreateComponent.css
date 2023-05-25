@@ -36,12 +36,12 @@
     
   }
   .custom-btn{
-    margin-top: 4rem;
+    margin-top: 3rem;
     text-align: center;
     background-color: black;
     color: white;
-    height: 54px;
-    width: 22rem;
+    height: 50px;
+    width: 21rem;
     margin-left: -0.1rem;
     font-size: 16px;
     
@@ -60,8 +60,8 @@
 display: flex;
 justify-content: center;
 align-items: center;
-width: 22rem;
-height: 8rem;
+width: 21rem;
+height: 6rem;
 border: 1px solid #E6EEFF ;
   }
   .img-box > img {
@@ -77,7 +77,7 @@ border: 1px solid #E6EEFF ;
 
   .Order-details > div:nth-child(1){
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     width: 1rem;
     margin-top: -1rem;
     align-self: flex-start;
