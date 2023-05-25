@@ -1,7 +1,10 @@
 import React from 'react'
+import './EmptyMenu.css'
 import LeftComponent from './LeftComponent'
 import MenuComponent from './subComponents/MenuComponent'
 import CreateComponent from './subComponents/CreateComponent'
+import { Controller } from 'react-hook-form'
+
 
 const EmptyMenu = () => {
   return (
@@ -20,6 +23,7 @@ const EmptyMenu = () => {
     <div></div>
     </div>
     <CreateComponent/>
+ 
     </div>
     </div>
     

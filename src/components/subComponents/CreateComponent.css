@@ -1,0 +1,88 @@
+.custom-input {
+    /* Add your styling rules here */
+    padding: 10px;
+    font-size: 16px;
+    width: 20rem;
+   border: none;
+    /* ...other styles */
+  }
+  
+  .custom-input:focus {
+    /* Add additional styling rules for when the input is focused */
+    outline: none;
+    border-color: blue;
+   
+    /* ...other styles */
+  }
+  textarea{
+    background-color: #E6EEFF ;;
+    border-radius: 12px;
+    border: none;
+  }
+  .label{
+    font-size: 16px;
+    text-align: left;
+    color: black;
+    font-weight:400;
+    margin-bottom: -0.5rem;
+  }
+  .menu-box{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    align-items: flex-start;
+
+  }
+  form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -1rem;
+    
+  }
+  .custom-btn{
+ 
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 54px;
+    width: 22rem;
+    margin-top: 5rem;
+    margin-left: -0.1rem;
+    font-size: 16px;
+    
+  }
+
+  .custom-btn:hover {
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+  align-items: flex-start;
+  }
+  .img-box{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+width: 22rem;
+height: 8rem;
+border: 1px solid #E6EEFF ;
+  }
+  .img-box > img {
+    width: 24px;
+    
+  }
+  .img-box > img:hover{
+    cursor: pointer;
+  }
+
+  .menu-box > div:nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+    width: 1rem;
+
+  }
+  form> div:nth-child(1){
+    margin-top: -0.5rem;
+
+  }
