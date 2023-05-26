@@ -6,6 +6,7 @@ import image4 from '../assets/Ellipse 67.png'
 import image5 from '../assets/Ellipse 68.png'
 import image6 from '../assets/Ellipse 69.png'
 import './LeftComponent.css'
+import { Link } from 'react-router-dom'
 
 
 const LeftComponent = () => {
@@ -18,17 +19,26 @@ const LeftComponent = () => {
         <div className='orders'>
             <div>
                  <img src={image1} alt='' />
-            <div> Orders</div>
+                 <Link to = "/orderList">
+                 <div> Orders</div>
+                 </Link>
+            
             <div className='num'>0</div>
 
             </div>
         <div>
             <img src={image2} alt=''/>
+            <Link to = "/menuList">
             <div>Menus</div>
+            </Link>
+            
         </div>
         <div>
             <img src={image3} alt='' />
+            <Link to = "/customerList">
             <div>Customers</div>
+            </Link>
+            
         </div>
         </div>
         <div className='menu'>
@@ -38,8 +48,11 @@ const LeftComponent = () => {
 <img src={image6} alt=''/>
             </div>
             <div>
-               Organize your menu through the button below 
-                 <div className='menu-button'>+Add menu</div>
+              <div>Organize your menu through the button below </div> 
+                
+              <Link to="/emptyMenu">
+              <div className='menu-button'>+Add menu</div>
+              </Link>
             </div>
         </div>
        

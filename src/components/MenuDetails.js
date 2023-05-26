@@ -2,6 +2,7 @@ import React from 'react'
 import './MenuDetails.css'
 import CreateComponent from './subComponents/CreateComponent'
 import LeftComponent from './LeftComponent'
+import MenuComponent from './subComponents/MenuComponent'
 
 const MenuDetails = () => {
   return (

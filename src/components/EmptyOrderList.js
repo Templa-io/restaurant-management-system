@@ -7,6 +7,7 @@ import image4 from '../assets/Ellipse 67.png'
 import image5 from '../assets/Ellipse 68.png'
 import image6 from '../assets/Ellipse 69.png'
 import image7 from '../assets/Image (2).png'
+import { Link } from 'react-router-dom'
 
 
 const EmptyOrderList = () => {
@@ -38,9 +39,12 @@ const EmptyOrderList = () => {
 <img src={image5} alt=''/>
 <img src={image6} alt=''/>
             </div>
-            <div>
-               Organize your menu through the button below 
-                 <div className='menu-button'>+Add menu</div>
+            <div>Organize your menu through the button below 
+            
+            <Link to="/emptyMenu">
+             <div className='menu-button'>+Add menu</div>
+            </Link>     
+           
             </div>
         </div>
        

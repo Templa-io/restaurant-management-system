@@ -5,6 +5,7 @@ import MenuComponent from './subComponents/MenuComponent'
 import { menuData } from './data/MenuData'
 import CreateComponent from './subComponents/CreateComponent'
 import image1 from '../assets/Rectangle 121.png'
+import { Link } from 'react-router-dom'
 
 const DashBoard = () => {
   return (
@@ -27,8 +28,13 @@ const DashBoard = () => {
     <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
     <div>USD 30.00</div> 
     <div className='Dish-btn'>
+    <Link to = "/emptyMenu">
     <div>Edit</div>
+    </Link>
+    <Link to = "/menuList">
     <div>Delete</div>
+    </Link>
+    
     </div>
     </div>
     

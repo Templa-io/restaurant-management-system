@@ -46,33 +46,9 @@
     padding-bottom: 1rem;
     font-weight: lighter;
 }
-.boxes{
-    display: flex;
-    gap: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    z-index: 4;
-}
-.boxes > div:nth-child(1){
-    background-color: black;
-    width: 7rem;
-    height: 10px;
-    border-radius: 2rem;
-}
-.boxes > div:nth-child(2){
-    background-color: white;
-    width: 7rem;
-    height: 10px;
-    border-radius: 2rem;
-}
-.boxes > div:nth-child(3){
-    background-color: white;
-    width: 7rem;
-    height: 10px;
-    border-radius: 2rem;
-}
+
 .hero-blur{
-width: 47rem;
+width: 50rem;
 height: 12rem;
 bottom: 0;
 left: 0;
@@ -84,8 +60,7 @@ left: 0;
     background: rgba(0, 0, 0, 0.6);
     filter: blur(20px);
    z-index: 1;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
+
    box-shadow:   
    0 100px black, 
    -7px 0 4px 3px black, 

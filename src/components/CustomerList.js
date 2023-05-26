@@ -3,6 +3,7 @@ import './CustomerList.css'
 import LeftComponent from './LeftComponent'
 import MenuComponent from './subComponents/MenuComponent'
 import { custData } from './data/CustomerData'
+import { Link } from 'react-router-dom'
 
 const CustomerList = () => {
   return (
@@ -25,6 +26,7 @@ const CustomerList = () => {
   </div>
   </div>
   
+
   <div className='Detail-btn'>{n.button}</div>
   </div>
     ))}
@@ -37,8 +39,10 @@ const CustomerList = () => {
   <div className='profile-details'>
 <div>John Doe</div>
   <div>johndoe@gmail.com</div>
-  <div>120 Orders</div>
+  <div>120 Orders</div> 
+   <Link to = "/customerOrder">
   <div> View all orders</div>
+  </Link>
   </div>
   </div>
 </div>

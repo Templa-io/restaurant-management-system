@@ -2,6 +2,7 @@ import React from 'react'
 import './CreateComponent.css'
 import image1 from '../../assets/gallery.png'
 import { Controller, useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
 
 
@@ -36,8 +37,9 @@ const onSubmit = (data) => {
    <img src={image1} alt=''/>
    <div>Attach an image </div>
    </div>
+   <Link to = "/dashboard">
    <div><input type={"submit"} className='custom-btn' value="Create"/></div>
-    
+    </Link>
     </form>
    
     </div>

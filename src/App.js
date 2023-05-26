@@ -8,11 +8,13 @@ import DashBoard from './components/DashBoard';
 import EmptyCustomer from './components/EmptyCustomer';
 import CustomerList from './components/CustomerList';
 import CustomerOrder from './components/CustomerOrder';
+import { Route, Routes } from 'react-router-dom';
+import MenuDetails from './components/MenuDetails';
 
 function App() {
   return (
     <div className="App">
-    {/* <Login/> */}
+     {/*<Login/>*/}
     {/*<EmptyOrderList/>*/}
 {/*<OrderList/>*/}
 {/*<EmptyMenu/>*/}
@@ -20,7 +22,18 @@ function App() {
 {/*<DashBoard/>*/}
 {/*<EmptyCustomer/>*/}
 {/*<CustomerList/>*/}
-<CustomerOrder/>
+  {/*<CustomerOrder/>*/}
+<Routes>
+<Route path="/" element={<EmptyOrderList/>}/>
+<Route path="orderList" element={<OrderList/>}/>
+<Route path="emptyMenu" element={<EmptyMenu/>}/>
+<Route path="menuList" element={<MenuList/>}/>
+<Route path="dashboard" element={<DashBoard/>}/>
+<Route path="menuDetails" element={<MenuDetails/>}/>
+<Route path="emptyCustomer" element={<EmptyCustomer/>}/>
+<Route path="customerList" element={<CustomerList/>}/>
+<Route path="customerOrder" element={<CustomerOrder/>}/>
+</Routes>
     </div>
   );
 }
