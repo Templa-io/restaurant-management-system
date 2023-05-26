@@ -1,0 +1,75 @@
+.Dish-section2{
+    display: flex;
+    flex-direction: column;
+    height: 32rem;
+    padding: 8px;
+    border-radius: 12px;
+    background-color:#EAEAEA ;
+    justify-content: flex-start;
+    }
+
+.Dish-section2 > img{
+    position: relative;
+    width: 25rem;
+    left: -10%;
+    
+}
+.Span-section1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+     text-align: left;
+     top: -30%;
+     gap: 6px;
+     
+}
+.Span-section1 > div:nth-child(1){
+    font-weight: bold;
+    font-size: 24px;
+    width: 10rem;
+    text-align: left;
+   line-height: 1.5rem;
+}
+
+.Span-section1 > div:nth-child(2){
+text-align: left;
+
+    color: gray;
+    font-size: 11px;
+    width: 20rem;
+}
+
+.Span-section1 > div:nth-child(3){
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    left: 20%;
+}
+.Dish-btn{
+    display: flex;
+    align-items:end;
+    gap: 2rem;
+}
+
+.Dish-btn > div:nth-child(1){
+    background-color:black ;
+    padding: 12px;
+    margin-top: 3rem;
+    border-radius: 12px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    width: 8rem;
+    color: white;
+    }
+    .Dish-btn > div:nth-child(2){
+        background-color:#F99191;
+        color: white;
+        padding: 12px;
+        width: 8rem;
+        border-radius: 6px;
+        border-radius: 12px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    }

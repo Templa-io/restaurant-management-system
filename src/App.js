@@ -4,6 +4,7 @@ import Login from './components/Login';
 import OrderList from './components/OrderList';
 import EmptyMenu from './components/EmptyMenu';
 import MenuList from './components/MenuList';
+import DashBoard from './components/DashBoard';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
     {/*<EmptyOrderList/>*/}
 {/*<OrderList/>*/}
 {/*<EmptyMenu/>*/}
-<MenuList/>
+{/*<MenuList/>*/}
+<DashBoard/>
     </div>
   );
 }
