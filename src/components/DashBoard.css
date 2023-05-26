@@ -1,11 +1,12 @@
 .Dish-section2{
     display: flex;
     flex-direction: column;
-    height: 32rem;
+    height: 31rem;
     padding: 8px;
     border-radius: 12px;
     background-color:#EAEAEA ;
     justify-content: flex-start;
+    margin-left: 3rem;
     }
 
 .Dish-section2 > img{
@@ -49,6 +50,7 @@ text-align: left;
     display: flex;
     align-items:end;
     gap: 2rem;
+    margin-top: -1rem;
 }
 
 .Dish-btn > div:nth-child(1){
