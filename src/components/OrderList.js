@@ -5,6 +5,7 @@ import LeftComponent from './LeftComponent'
 import ComponentRight from '../components/subComponents/ComponentRight'
 import { orderData } from './data/OrderData'
 import image1 from '../assets/Rectangle 121.png'
+import { Link } from 'react-router-dom'
 
 
 const OrderList = () => {
@@ -48,8 +49,14 @@ const OrderList = () => {
    <div>3 servings</div>
    <div>USD 30.00</div> 
     <div className='section-btn'>
-   <div>Confirm Order</div>
-   <div>Decline</div>
+    <Link>
+    <div className='confirm-btn'>Confirm Order</div>
+    </Link>
+   
+   <Link>
+     <div className='decline-btn'>Decline</div>
+   </Link>
+ 
    </div>
    </div>
    </div>

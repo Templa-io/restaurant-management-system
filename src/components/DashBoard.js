@@ -28,11 +28,11 @@ const DashBoard = () => {
     <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
     <div>USD 30.00</div> 
     <div className='Dish-btn'>
-    <Link to = "/emptyMenu">
-    <div>Edit</div>
+    <Link to = "/emptyMenu" >
+    <div className='edit-btn'>Edit</div>
     </Link>
     <Link to = "/menuList">
-    <div>Delete</div>
+    <div className='delete-btn'>Delete</div>
     </Link>
     
     </div>

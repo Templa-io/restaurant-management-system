@@ -136,7 +136,7 @@ width: 20rem;
     align-items:end;
     gap: 2rem;
 }
-.section-btn > div:nth-child(1){
+.confirm-btn {
 background-color:#E2FFE5 ;
 padding: 12px;
 border-radius: 24px;
@@ -145,7 +145,12 @@ text-align: center;
 font-weight: bold;
 width: 6rem;
 }
-.section-btn > div:nth-child(2){
+
+.confirm-btn:hover{
+    background-color: black;
+}
+
+.decline-btn {
     background-color:#FFE2E2 ;
     padding: 12px;
     width: 5rem;
@@ -155,3 +160,7 @@ font-size: 12px;
 text-align: center;
 font-weight: bold;
 }
+.decline-btn:hover{
+    background-color: black;
+}
+

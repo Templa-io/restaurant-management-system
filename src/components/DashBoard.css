@@ -46,15 +46,15 @@ text-align: left;
     font-size: 20px;
     left: 20%;
 }
-.Dish-btn{
+.Dish-btn {
     display: flex;
     align-items:end;
     gap: 2rem;
     margin-top: -1rem;
 }
 
-.Dish-btn > div:nth-child(1){
-    background-color:black ;
+.delete-btn{
+       background-color:#F99191;
     padding: 12px;
     margin-top: 3rem;
     border-radius: 12px;
@@ -64,8 +64,8 @@ text-align: left;
     width: 8rem;
     color: white;
     }
-    .Dish-btn > div:nth-child(2){
-        background-color:#F99191;
+    .edit-btn{
+     background-color:black ;
         color: white;
         padding: 12px;
         width: 8rem;
@@ -75,3 +75,11 @@ text-align: left;
     text-align: center;
     font-weight: bold;
     }
+   .delete-btn:hover {
+       color:  red;
+        
+    }
+    .Dish-btn a:active > div:nth-child(1){
+        transform: translateY(4px);
+    }
+  

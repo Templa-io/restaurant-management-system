@@ -55,6 +55,10 @@
   font-weight: bold
   ;
   }
+  .custom-btn:active {
+    transform: translateY(4px);
+  }
+
   .img-box{
 display: flex;
 justify-content: center;

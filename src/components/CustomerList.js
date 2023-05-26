@@ -41,7 +41,7 @@ const CustomerList = () => {
   <div>johndoe@gmail.com</div>
   <div>120 Orders</div> 
    <Link to = "/customerOrder">
-  <div> View all orders</div>
+  <div className='order-btn'> View all orders</div>
   </Link>
   </div>
   </div>
