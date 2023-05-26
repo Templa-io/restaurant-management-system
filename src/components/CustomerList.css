@@ -1,0 +1,89 @@
+.email-order{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.email-order > div {
+    display: flex;
+    gap: 12px;
+    
+}
+
+.ppic {
+background-color:#E6EEFF ;
+width: 3rem;
+height: 3rem;
+border-radius: 24px;
+margin-left: -2rem;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+.Detail-btn{
+    display: flex;
+    padding-top: 6px;
+    align-content: center;
+    justify-content: center;
+    width: 6rem;
+    text-align: center;
+    background-color:#7ACB6D ;
+    border-radius: 12px;
+    color: white;
+    height: 30px;
+    margin-left: 5rem;
+
+}
+.names > div:nth-child(1) {
+     font-weight: bold;
+}
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.customer-profile > div:nth-child(1){
+width: 8rem;
+height: 8rem;
+background-color:#E6EEFF  ;
+border-radius: 5rem;
+
+}
+.customer-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: ce;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+.profile-details > div:nth-child(1){
+    margin-top:1rem ;
+    font-weight: bold;
+}
+.profile-details > div:nth-child(3){
+ background-color:#D0FFC9 ;
+ color:#7ACB6D ;
+ width: 6rem;
+margin-top: 12px;
+ border-radius: 8px;
+ padding: 4px;
+}
+.profile-details > div:nth-child(4){
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+  width: 6rem;
+  font-size: 12px;
+  height: 1.5rem;
+    color: white;
+    padding: 6px;
+    border-radius: 24px;
+}
