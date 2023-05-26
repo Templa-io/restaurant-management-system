@@ -36,7 +36,7 @@
     
   }
   .custom-btn{
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
     background-color: black;
     color: white;
@@ -82,6 +82,7 @@ border: 1px solid #E6EEFF ;
     margin-top: -1rem;
     align-self: flex-start;
     padding-left: 1rem;
+    padding-top: 12px;
   }
   form> div:nth-child(1){
     margin-top: -0.5rem;

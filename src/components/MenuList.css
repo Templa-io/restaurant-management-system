@@ -1,0 +1,81 @@
+.Dish-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 11rem;
+    height: 14rem;
+    padding: 12px;
+    padding-left: 2px;
+    border-radius: 12px;
+    background-color:#EAEAEA ;
+    }
+    .Span-section{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+         text-align: left;
+         padding-left: 1rem;
+         top: -20%;
+         gap: 6px;
+         
+    }
+    .Span-section > div:nth-child(1){
+        font-weight: bold;
+        font-size: 1rem;
+        width: 10rem;
+        line-height: 1.2rem;
+       
+    }
+
+    .Span-section > div:nth-child(2){
+        color: gray;
+        font-size: 11px;
+        width: 10rem;
+    }
+ 
+    .Span-section > div:nth-child(3){
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .Section-btn > div:nth-child(1){
+    background-color:#E2FFE5 ;
+    padding: 12px;
+    border-radius: 24px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    width: 6rem;
+    }
+    .section-btn > div:nth-child(2){
+        background-color:#FFE2E2 ;
+        padding: 12px;
+        width: 5rem;
+        border-radius: 6px;
+        border-radius: 24px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    }
+    .Dish-section > img{
+        width: 12rem;
+        margin-right: 12rem;
+    }
+.Dish-section1{
+  display: flex;
+  flex-direction: column;
+    width: 11rem;
+    height: 14rem;
+    padding: 12px;
+  padding-left: 2px;
+    border-radius: 12px;
+    background-color:#EAEAEA ;
+}
+.Dish-section1 > img{
+    width: 12rem;
+    margin-right: 12rem;
+}
+.Active-orders > div{
+    padding-left: 3rem;
+    display: flex;
+    gap:4rem;
+}
