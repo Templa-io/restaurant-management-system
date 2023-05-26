@@ -2,10 +2,9 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 11rem;
-    height: 13rem;
-    padding: 12px;
-    padding-left: 2px;
+    width: 10rem;
+    height: 12rem;
+    padding: 8px;
     border-radius: 12px;
     background-color:#EAEAEA ;
     }
@@ -23,7 +22,7 @@
         font-weight: bold;
         font-size: 12px;
         width: 8rem;
-        line-height: 1.2rem;
+        line-height: 14px;
        
     }
 
@@ -37,45 +36,28 @@
         font-weight: bold;
         font-size: 1rem;
     }
-    .Section-btn > div:nth-child(1){
-    background-color:#E2FFE5 ;
-    padding: 12px;
-    border-radius: 24px;
-    font-size: 12px;
-    text-align: center;
-    font-weight: bold;
-    width: 6rem;
-    }
-    .section-btn > div:nth-child(2){
-        background-color:#FFE2E2 ;
-        padding: 12px;
-        width: 5rem;
-        border-radius: 6px;
-        border-radius: 24px;
-    font-size: 12px;
-    text-align: center;
-    font-weight: bold;
-    }
+
+
     .Dish-section > img{
-        width: 12rem;
+        width: 10rem;
         margin-right: 12rem;
     }
 .Dish-section1{
   display: flex;
   flex-direction: column;
-    width: 11rem;
-    height: 13rem;
-    padding: 12px;
+    width: 10rem;
+    height: 12rem;
+    padding: 8px;
   padding-left: 2px;
     border-radius: 12px;
     background-color:#EAEAEA ;
 }
 .Dish-section1 > img{
-    width: 12rem;
+    width: 10rem;
     margin-right: 12rem;
 }
 .Active-orders > div{
-    padding-left: 3rem;
+    padding-left: 4rem;
     display: flex;
     gap:4rem;
 }
