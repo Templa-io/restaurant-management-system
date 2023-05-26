@@ -1,0 +1,12 @@
+.active-orders > img{
+width: 5rem;
+position: relative;
+top: -10%;
+}
+
+.order-details > img{
+    width: 3rem;
+    position: relative;
+    top: -10%;
+    
+}

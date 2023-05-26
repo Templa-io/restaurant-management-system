@@ -1,0 +1,10 @@
+.active-orders > div:nth-child(3){
+    width: 4rem;
+    height: 30px;
+    border: 2px solid black;
+}
+    .active-orders > div:nth-child(4){
+        width: 4rem;
+        height: 30px;
+        border: 2px solid black;
+ }

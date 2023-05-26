@@ -201,23 +201,18 @@ color: black;
     
 }
 .active-orders > div:nth-child(1){
+    position: relative;
+    top: -10%;
 font-weight: bold;
 font-size: 20px;
 }
 .active-orders > div:nth-child(2){
     color: gray;
+    position: relative;
+    top: -10%;
     
 }
-.active-orders > div:nth-child(3){
-    width: 4rem;
-    height: 30px;
-    border: 2px solid black;
-}
-    .active-orders > div:nth-child(4){
-        width: 4rem;
-        height: 30px;
-        border: 2px solid black;
- }
+
 .order-details{
     display: flex;
     flex-direction: column;
@@ -225,16 +220,20 @@ font-size: 20px;
     background:#F4F3F34D ;
     border-radius: 20px;
     justify-content: center;
-    width: 20rem;
-    height: 40rem;
+    width: 24rem;
+    height: 45rem;
     gap: 20px;
   
 }
 
 .order-details > div:nth-child(1){
+    position: relative;
+    top: -10%;
 font-weight: bold;
 font-size: 20px;
 }
 .order-details > div:nth-child(2){
     color: gray;
+    position: relative;
+    top: -10%;
 }
