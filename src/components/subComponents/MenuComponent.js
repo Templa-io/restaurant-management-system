@@ -7,12 +7,13 @@ const MenuComponent = () => {
     <div className='hero-right'>
     <div className='my-menu'>
     <div><span>My Menu.</span></div>
+    <div className='box'>
     <div className='profile'>
         <div>admin</div>
 <div>admin@gmail.com</div>
     </div>
      <img src={image1} alt=''/>
-   
+   </div>
 </div>
     </div>
   )

@@ -8,12 +8,13 @@ const ComponentRight = () => {
     <div className='hero-right'>
     <div className='admin'>
     <div><span>My orders.</span></div>
+    <div className='box'>
     <div className='profile'>
         <div>admin</div>
 <div>admin@gmail.com</div>
     </div>
      <img src={image7} alt=''/>
-   
+   </div>
 </div>
     </div>
   )
