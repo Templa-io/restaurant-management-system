@@ -4,6 +4,7 @@ import LeftComponent from './LeftComponent'
 import MenuComponent from './subComponents/MenuComponent'
 import { custData } from './data/CustomerData'
 import { Link } from 'react-router-dom'
+import CustomerComponents from './subComponents/CustomerComponents'
 
 const CustomerList = () => {
   return (
@@ -13,7 +14,7 @@ const CustomerList = () => {
      <LeftComponent/>
     </div>
     <div className='Hero-right'>
-    <MenuComponent/>
+    <CustomerComponents/>
     <div className='container'>
     <div className='Active-orders'>
     {custData && custData.map(n =>(
