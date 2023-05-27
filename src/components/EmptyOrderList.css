@@ -1,6 +1,7 @@
 .Hero{
     display: flex;
-    overflow: hidden;
+    overflow: hidden; 
+    width: 100%;
     height: 100vh;
 }
 .Hero-left{
@@ -8,7 +9,7 @@
     flex-direction: column;
     background-color: #E6EEFF;
     padding: 16px;
-    width: 100%;
+   
 }
 
 .Hero-left >div:nth-child(1){
@@ -116,4 +117,7 @@ font-size: 20px;
 }
 .box{
     display: flex;
+}
+.box{
+    gap:12px;
 }
