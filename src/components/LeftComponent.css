@@ -3,6 +3,9 @@
     display: flex;
     overflow: hidden;
     height: 100vh;
+   width: 100%;
+   margin: 0 auto;
+
 }
 .hero-left{
     flex-direction: column;
