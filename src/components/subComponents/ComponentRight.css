@@ -1,6 +1,7 @@
 .hero-right{
     display: flex;
     flex-direction: column;
+    
 }
 .box > img {
     width: 2rem;
