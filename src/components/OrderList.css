@@ -54,12 +54,13 @@ line-height: 16px;
     align-items: flex-start;
     background: #F4F3F34D;
     border-radius: 20px;
-    width: 50%;
+    width: 70%;
     height: 44rem;
     gap: 20px;
     padding: 24px;
 }
 .dish-section > img{
+    position: absolute;
     width: 20rem;
 }
 .Order-details{
@@ -74,12 +75,13 @@ line-height: 16px;
     padding: 16px; 
 }
 .dish-section{
-position: absolute;
+display: flex;
+flex-direction: column;
 width: 20rem;
 }
 .span-section{
     position: absolute;
-    top: 70%;
+    top: 40%;
      text-align: left;
      padding-left: 2rem;
 }
