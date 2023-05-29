@@ -2,32 +2,16 @@
 .Hero{
     display: flex;
     overflow: hidden;
-    height: 100vh;
+    height: 100;
    width: 100%;
    margin: 0 auto;
 
 }
-.hero-left{
-    flex-direction: column;
-    background-color: #E6EEFF;
-}
-.hero-left >div:nth-child(1){
-    display: flex;
-    flex-direction: column;
-    width: 20px;
-    line-height: 20px;
-    
-}
-.hero-left > div >span{
-    font-size: 12px;
-}
-
-
 .Hero-left{
     flex: 1 ;
+    height: 100%;
     flex-direction: column;
     background-color: #E6EEFF;
-    padding: 16px;
 }
 
 .Hero-left >div:nth-child(1){
@@ -43,9 +27,17 @@
 a {
     text-decoration: none;
 }
+.box1{
+    display: flex;
+align-items: center;
+justify-content: center;
+    width: 16rem;
+    height: 20rem;
+    margin-top: auto;
+    padding-bottom: 12px;
+}
 .menu{
     display: flex;
-    margin-top:13rem;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -53,9 +45,9 @@ a {
     padding-left: 16px;
     border-radius: 16px;
     width: 11rem;
-    margin-left: 2rem;
     gap: 12px;
-    height: 12rem;
+    height: 12rem;  
+    margin-top: auto;
 }
 .menu > div > img {
     width: 40px;

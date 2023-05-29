@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 const LeftComponent = () => {
   return (
   
-   <div className='hero-left'>
+   <div className='Hero-left'>
         <div>
             <span>Restaurant system</span>
         </div>
@@ -40,7 +40,8 @@ const LeftComponent = () => {
             </Link>
             
         </div>
-        </div>
+        </div>   
+        <div className='box1'>
         <div className='menu'>
             <div className='img'>
 <img src={image4} alt='' />
@@ -54,6 +55,7 @@ const LeftComponent = () => {
               <div className='menu-button'>+Add menu</div>
               </Link>
             </div>
+        </div> 
         </div>
        
        </div> 

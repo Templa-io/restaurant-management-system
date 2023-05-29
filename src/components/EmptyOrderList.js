@@ -14,35 +14,35 @@ import LeftComponent from './LeftComponent'
 const EmptyOrderList = () => {
   return (
     <div className='Hero'>
-    <div className='Hero-left'>
-    <LeftComponent/></div>
-       <div className='Hero-right'>
+      <div className='Hero-left'>
+        <LeftComponent /></div>
+      <div className='Hero-right'>
         <div className='admin'>
-            <div><span>My orders.</span></div>
-            <div className='box'>
-                   <div className='profile'>
-                <div>admin</div>
-<div>admin@gmail.com</div>
+          <div><span>My orders.</span></div>
+          <div className='box'>
+            <div className='profile'>
+              <div>admin</div>
+              <div>admin@gmail.com</div>
             </div>
-             <img src={image7} alt=''/>
-            </div>
-     
-           
+            <img src={image7} alt='' />
+          </div>
+
+
         </div>
         <div className='container'>
-              <div className='active-orders'>
+          <div className='active-orders'>
             <div>No Active Orders</div>
             <div>All active oders will appear here</div>
-            <img src={image1} alt=''/>
-        </div>
-        <div className='order-details'>
+            <img src={image1} alt='' />
+          </div>
+          <div className='order-details'>
             <div>Order Details</div>
             <div>order details will display here</div>
-            <img src={image1} alt=''/>
+            <img src={image1} alt='' />
+          </div>
         </div>
-        </div>
-      
-       </div>
+
+      </div>
     </div>
   )
 }

@@ -24,7 +24,8 @@ function App() {
 {/*<CustomerList/>*/}
   {/*<CustomerOrder/>*/}
 <Routes>
-<Route path="/" element={<EmptyOrderList/>}/>
+<Route path='/' element={<Login/>}/>
+<Route path="home" element={<EmptyOrderList/>}/>
 <Route path="orderList" element={<OrderList/>}/>
 <Route path="emptyMenu" element={<EmptyMenu/>}/>
 <Route path="menuList" element={<MenuList/>}/>

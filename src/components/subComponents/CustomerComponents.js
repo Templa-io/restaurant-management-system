@@ -5,7 +5,7 @@ import image1 from '../../assets/Image (2).png'
 const CustomerComponents = () => {
   return (
     <div className='hero-right'>
-    <div className='my-menu'>
+    <div className='my-menu'> 
     <div><span>Customer Order.</span></div>
     <div className='box'>
     <div className='profile'>

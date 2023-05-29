@@ -1,10 +1,4 @@
-.Hero-left{
-    flex: 1 ;
-    flex-direction: column;
-    background-color: #E6EEFF;
-    overflow: hidden;
-    height: 100vw;
-}
+
 
 .details{
     display: flex;
@@ -60,7 +54,7 @@ line-height: 16px;
     align-items: flex-start;
     background: #F4F3F34D;
     border-radius: 20px;
-    width: 36rem;
+    width: 50%;
     height: 44rem;
     gap: 20px;
     padding: 24px;
@@ -74,7 +68,7 @@ line-height: 16px;
     align-items: center;
     background:#F4F3F34D ;
     border-radius: 20px;
-    width: 24rem;
+    width: 40%;
     height: 45rem;
     gap: 20px;
     padding: 16px; 
