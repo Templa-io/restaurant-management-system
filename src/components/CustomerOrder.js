@@ -51,16 +51,7 @@ const CustomerOrder = () => {
     </div>
     </div>
 
-    
-    <div className='Dish-section1'>
-    <img src={image1} alt=''/>
-    <div className='Span-section'>
-    <div>{n.name}</div>
-    <div>{n.description}</div>
-    <div>{n.price}</div> 
-    
-    </div>
-    </div>
+
     </div> 
     ))}
 
