@@ -36,29 +36,29 @@
     
   }
   .custom-btn{
-    margin-top: 3rem;
     text-align: center;
     background-color: black;
     color: white;
     height: 40px;
     width: 16rem;
+    border-radius: 12px;
+    border: none;
     font-size: 16px;
-    
+    align-self: center;
+    margin-top:3.5rem;
   }
 
   .custom-btn:hover {
     cursor: pointer;
     background-color: orange;
     border: none;
-  align-items: flex-start;
   color: black;
   font-weight: bold
   ;
   }
-  .custom-btn:active {
+  .custom-btn:active{
     transform: translateY(4px);
   }
-
   .img-box{
 display: flex;
 justify-content: center;
@@ -66,6 +66,9 @@ align-items: center;
 width: 16rem;
 height: 6rem;
 border: 1px solid #E6EEFF ;
+  }
+  .img-box:hover{
+    cursor: pointer;
   }
   .img-box > img {
     width: 24px;
@@ -91,3 +94,15 @@ border: 1px solid #E6EEFF ;
     margin-top: -0.5rem;
 
   }
+  .img-input{
+    width: 0;
+    height: 0;
+    border: none;
+    background-color: white;
+    align-self: center;
+  }
+ .img-asset{
+width: fit-content;
+height: fit-content;
+object-fit: cover;
+ }
