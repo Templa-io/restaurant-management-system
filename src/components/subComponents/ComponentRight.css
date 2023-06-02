@@ -3,11 +3,21 @@
     flex-direction: column;
     
 }
+.box{
+    display: flex; 
+    gap:10px;
+}
 .box > img {
     width: 2rem;
     height: 2rem;
     border-radius: 20rem;
     margin-bottom: 2rem;
+}
+.box > img:hover{
+cursor: pointer;
+}
+.box > img:active{
+    transform: translateY(4px);
 }
 .profile{
     display: flex;
@@ -24,4 +34,28 @@
 }
 .profile > div:nth-child(2){
     font-size: 12px;
+}
+.popup{
+    margin-top: 12px;
+    position:absolute;
+    right: 12px;
+    top: 44px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 5rem;
+    background:lightgray;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.popup > div {
+    font-size: 12px;
+    font-weight: bold;
+}
+.popup:hover > div {
+cursor: pointer;
+}
+.popup:active{
+    transform: translateY(4px);
 }

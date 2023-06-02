@@ -58,6 +58,7 @@ line-height: 16px;
     height: 44rem;
     gap: 20px;
     padding: 24px;
+    margin-bottom: 4rem;
 }
 .dish-section > img{
     position: absolute;
@@ -73,6 +74,7 @@ line-height: 16px;
     height: 45rem;
     gap: 20px;
     padding: 16px; 
+    margin-bottom: 3rem;
 }
 .dish-section{
 display: flex;
@@ -139,7 +141,7 @@ border-radius: 24px;
 font-size: 12px;
 text-align: center;
 font-weight: bold;
-width: 6rem;
+width: 8rem;
 }
 
 .confirm-btn:hover{

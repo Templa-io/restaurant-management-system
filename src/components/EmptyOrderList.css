@@ -1,8 +1,9 @@
 
 .admin{
+    padding-left:2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15%;
  
 }
 .admin > div:nth-child(1){
@@ -86,9 +87,4 @@ font-size: 20px;
     position: relative;
     top: -10%;
 }
-.box{
-    display: flex;
-}
-.box{
-    gap:12px;
-}
+
