@@ -49,15 +49,7 @@ const CustomerComponents = ({ user}) => {
         </div>
       
         <img src={user ? user.photoURL : image7} alt='userProfile' onClick={Login}/>
-        {
-          isMenu && (
-            <div className='popup'>
-        
-         <div onClick={logout}>Logout</div>
-        
-          </div>
-          )
-         }
+  
       
    </div>
 </div>

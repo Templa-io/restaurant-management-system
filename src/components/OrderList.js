@@ -17,7 +17,7 @@ const OrderList = () => {
     </div>
     <div className='Hero-right'>
    <ComponentRight/>
-   <div className='container'>
+   <div className='container12'>
    <div className='Active-orders'>
    {orderData && orderData.map(n =>(
     <div key={n.id} className='details'>
@@ -27,41 +27,26 @@ const OrderList = () => {
      <div>{n.name}</div>
     <div>{n.price}</div>
     <div>{n.number}</div>
+
     </div>
   
    <div>{n.description}</div>
    </div>
-   
+       <div className='section-btn'>
+    <Link>
+    <div className='confirm-btn'>Confirm Order</div>
+    </Link>
+   <Link>
+     <div className='decline-btn'>Decline</div>
+   </Link>
+   </div>
  
     </div>
    ))}
    
    </div>
 
-   <div className='Order-details'>
-   <div className='dish-section'>
-   <img src={image1} alt=''/>
-   <div className='span-section'>
-   <div>Octopus with citrus salad & herbs</div>
-   <div>Order no.340534</div>
-   <div>Sem aliquet sit urna aliquam vitae nisl convallis ac, tristique. Nec lectus eget feugiat ornare. </div>
-   <div>Location:Texas</div>
-   <div>3 servings</div>
-   <div>USD 30.00</div> 
-    <div className='section-btn'>
-    <Link>
-    <div className='confirm-btn'>Confirm Order</div>
-    </Link>
-   
-   <Link>
-     <div className='decline-btn'>Decline</div>
-   </Link>
- 
-   </div>
-   </div>
-   </div>
- 
-   </div>
+  
    </div>
 
     </div>

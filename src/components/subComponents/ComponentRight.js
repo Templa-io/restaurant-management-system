@@ -57,15 +57,7 @@ const logout = () => {
   
     <img src={user ? user.photoURL : image7} alt='userProfile' onClick={login}/>
    
-   {
-    isMenu && (
-      <div className='popup'>
-  
-   <div onClick={logout}>Logout</div>
-  
-    </div>
-    )
-   }
+
     
     
     </div>

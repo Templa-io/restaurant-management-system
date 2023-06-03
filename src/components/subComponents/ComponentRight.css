@@ -5,7 +5,8 @@
 }
 .box{
     display: flex; 
-    gap:10px;
+    justify-content: space-between;
+
 }
 .box > img {
     width: 2rem;
@@ -37,8 +38,8 @@ cursor: pointer;
 }
 .popup{
     margin-top: 12px;
-    position:absolute;
-    right: 12px;
+ 
+  
     top: 44px;
     display: flex;
     justify-content: center;
