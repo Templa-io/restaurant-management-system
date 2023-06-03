@@ -131,6 +131,7 @@ width: 20rem;
 }
 .section-btn{
     display: flex;
+    margin-left: 25rem;
     flex-direction: column;
     height: 6rem;
     display: flex;
@@ -139,12 +140,12 @@ width: 20rem;
 }
 .confirm-btn {
 background-color:#E2FFE5 ;
-padding: 12px;
+padding: 8px;
 border-radius: 24px;
-font-size: 12px;
+font-size: 10px;
 text-align: center;
 font-weight: bold;
-width: 8rem;
+width: 6rem;
 }
 
 .confirm-btn:hover{
@@ -153,11 +154,11 @@ width: 8rem;
 
 .decline-btn {
     background-color:#FFE2E2 ;
-    padding: 12px;
-    width: 8rem;
+    padding: 8px;
+    width: 6rem;
     border-radius: 6px;
     border-radius: 24px;
-font-size: 12px;
+font-size: 10px;
 text-align: center;
 font-weight: bold;
 }

@@ -24,29 +24,29 @@ const CustomerList = () => {
   <div className='names'>
   <div>{n.name}</div>
   <div>{n.email}</div>
-  </div>
-  </div>
   
+  </div>
+  </div>
+  <div>
+  <div className='ppic'></div>
+  <div className='names'>
+  <div>{n.name}</div>
+  <div>{n.email}</div>
+  </div>
+  </div>
+  <div>
+  <div className='ppic'></div>
+  <div className='names'>
+  <div>{n.name}</div>
+  <div>{n.email}</div>
+  </div>
+  </div>
 
-  <div className='Detail-btn'>{n.button}</div>
   </div>
     ))}
   
     </div>
-    <div className='Order-details'>
-    <div>Customer Profile</div>
-  <div className='customer-profile'> 
-  <div></div>
-  <div className='profile-details'>
-<div>John Doe</div>
-  <div>johndoe@gmail.com</div>
-  <div>120 Orders</div> 
-   <Link to = "/customerOrder">
-  <div className='order-btn'> View all orders</div>
-  </Link>
-  </div>
-  </div>
-</div>
+
     </div>
     </div>
     

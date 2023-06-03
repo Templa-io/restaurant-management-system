@@ -21,25 +21,25 @@ const MenuList = ({ data }) => {
     <MenuComponent/>
     <div className='container'>
     <div className='Active-orders'>
-    {data && 
-      data.map((item) =>(
+    {menuData && 
+      menuData.map((item) =>(
 
             <div>
-      <div key={item?.id} className='Dish-section'>
-    <img src={item?.imageURL} alt=''/>
+      <div key={item.id} className='Dish-section'>
+    <img src={image1} alt=''/>
     <div className='Span-section'>
-    <div>{item?.title}</div>
-    <div>{item?.description}</div>
-    <div>{item?.price}</div> 
+    <div>{item.title}</div>
+    <div>{item.description}</div>
+    <div>{item.price}</div> 
     
     </div>
     </div>
       <div className='Dish-section1'>
-      <img src={item?.imageURL} alt=''/>
+      <img src={image1} alt=''/>
       <div className='Span-section'>
-      <div>{item?.title}</div>
-      <div>{item?.description}</div>
-      <div>{item?.price}</div> 
+      <div>{item.title}</div>
+      <div>{item.description}</div>
+      <div>{item.price}</div> 
     
     </div>
     </div>

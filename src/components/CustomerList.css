@@ -1,11 +1,13 @@
 .email-order{
     display: flex;
-    justify-content: space-between;
+
+
     
 }
 .email-order > div {
     display: flex;
-    gap: 12px;
+    gap: 24px;
+    padding-bottom: 2rem;
     
 }
 
