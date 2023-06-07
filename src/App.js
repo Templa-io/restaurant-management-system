@@ -14,6 +14,7 @@ import { useStateValue } from './context/StateProvider';
 import { getAllFoodItems } from './utils/fireBAseFunctions';
 import { actionType } from './context/reducer';
 import { useEffect } from 'react';
+import CreateMenu from './components/CreateMenu';
 
 function App() {
 const [{foodItems}, dispatch] = useStateValue();
@@ -44,6 +45,7 @@ useEffect(() => {
 <Route path="menuDetails" element={<MenuDetails/>}/>
 <Route path="emptyCustomer" element={<EmptyCustomer/>}/>
 <Route path="customerList" element={<CustomerList/>}/>
+<Route path="createmenu" element={<CreateMenu/>}/>
 <Route path="customerOrder" element={<CustomerOrder/>}/>
 </Routes>
     </div>

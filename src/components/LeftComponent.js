@@ -51,7 +51,7 @@ const LeftComponent = () => {
             <div>
               <div>Organize your menu through the button below </div> 
                 
-              <Link to="/emptyMenu">
+              <Link to="/createmenu">
               <div className='menu-button'>+Add menu</div>
               </Link>
             </div>

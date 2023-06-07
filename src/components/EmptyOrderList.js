@@ -35,11 +35,7 @@ const EmptyOrderList = () => {
             <div>All active oders will appear here</div>
             <img src={image1} alt='' />
           </div>
-          <div className='order-details'>
-            <div>Order Details</div>
-            <div>order details will display here</div>
-            <img src={image1} alt='' />
-          </div>
+         
         </div>
 
       </div>

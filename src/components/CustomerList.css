@@ -1,14 +1,20 @@
+
 .email-order{
-    display: flex;
+    align-self: flex-start;
 
-
-    
 }
 .email-order > div {
     display: flex;
     gap: 24px;
     padding-bottom: 2rem;
-    
+}
+.email-order > div:nth-child(2) {
+
+    padding-left: 5rem;
+}
+.email-order > div:nth-child(3) {
+
+    padding-left: 5rem;
 }
 
 .ppic {

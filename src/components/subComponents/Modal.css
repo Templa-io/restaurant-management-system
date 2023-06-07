@@ -1,0 +1,14 @@
+.modal{
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    word-break: break-all;
+}
+.actions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}

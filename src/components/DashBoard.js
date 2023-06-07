@@ -41,7 +41,7 @@ const DashBoard = () => {
     </div>
     
     </div>
-    <CreateComponent/>
+  
  
     </div>
     </div>

@@ -21,15 +21,15 @@
     .Span-section > div:nth-child(1){
         font-weight: bold;
         font-size: 12px;
-        width: 8rem;
+        width: 7rem;
         line-height: 14px;
        
     }
 
     .Span-section > div:nth-child(2){
         color: gray;
-        font-size: 11px;
-        width: 10rem;
+        font-size: 10px;
+        width: 8rem;
     }
  
     .Span-section > div:nth-child(3){

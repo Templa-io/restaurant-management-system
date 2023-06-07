@@ -17,7 +17,7 @@ const CustomerOrder = () => {
     <div className='Hero-right'>
     <MenuComponent/>
     <div className='container'>
-    <div className='Active-orders1'>
+    <div className='Active-orders1 '>
     <div className='header'>John Doe Orders.</div>
     {menuData && menuData.map(n =>(
 

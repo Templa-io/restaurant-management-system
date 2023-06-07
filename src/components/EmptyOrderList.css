@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-   min-width:fit-content;
+    min-width: 100%;
  
 }
 .active-orders{
@@ -44,8 +44,8 @@
     justify-content: center;
     background: #F4F3F34D;
     border-radius: 20px;
-    width: 70%;
-    height: 100%;
+    width: 65rem;
+    height: 40rem;
     gap: 20px;
     
 }

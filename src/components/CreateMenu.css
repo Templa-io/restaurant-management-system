@@ -1,22 +1,22 @@
-.custom-input {
+.custom-input1 {
     /* Add your styling rules here */
     padding: 10px;
     font-size: 12px;
-    width: 16rem;
+    width: 25rem;
    border: none;
     /* ...other styles */
   }
   
-  .custom-input:focus {
+  .custom-input1:focus {
     /* Add additional styling rules for when the input is focused */
     outline: none;
     border-color: blue;
    
     /* ...other styles */
   }
-  textarea{
+  .textarea{
     background-color: #E6EEFF ;;
-    width: 16rem;
+    width: 25rem;
     border-radius: 12px;
     border: none;
   }
@@ -35,13 +35,13 @@
   
     
   }
-  .custom-btn{
+  .custom-btn2{
     position: relative;
     text-align: center;
     background-color: black;
     color: white;
     height: 40px;
-    width: 16rem;
+    width: 25rem;
     border-radius: 12px;
     border: none;
     font-size: 16px;
@@ -50,7 +50,7 @@
 
   }
 
-  .custom-btn:hover {
+  .custom-btn2:hover {
     cursor: pointer;
     background-color: orange;
     border: none;
@@ -58,64 +58,36 @@
   font-weight: bold
   ;
   }
-  .custom-btn:active{
+  .custom-btn2:active{
     transform: translateY(4px);
   }
-  .img-box{
+  .img-box1{
 display: flex;
 align-items: center;
 justify-content: center;
 align-items: center;
-width: 16rem;
+width: 25rem;
 height: 6rem;
 border: 1px solid #E6EEFF ;
   }
-  .img-box:hover{
-    cursor: pointer;
-  }
-  .label{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .label > img {
-    width: 20px;
-    
-  }
-  .label-box{
+.Order-details1{
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .img-box > img:hover{
-    cursor: pointer;
-  }
-  .img-box > div {
-    font-size: 12px;
-  }
-
-  .Order-details > div:nth-child(1){
+    background: #F4F3F34D;
+    border-radius: 20px;
+    width: 100%;
+    height: 47rem;
+    gap: 20px;
+}
+.Order-details1 > div:nth-child(1){
     font-weight: bold;
     font-size: 18px;
     width: 1rem;
     margin-top: -1rem;
+    padding-left: 20rem;
     align-self: flex-start;
-    padding-left: 4rem;
     padding-top: 12px;
   }
-  form> div:nth-child(1){
-    margin-top: -0.5rem;
 
-  }
-  .img-input{
-    width:0;
-    height: 0;
-    border: none;
-    background-color: white;
-   
-  }
- .img-asset{
-width: fit-content;
-height: fit-content;
-object-fit: cover;
- }

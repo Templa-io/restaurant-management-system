@@ -17,6 +17,12 @@ export const orderData = [
 {
     id: 5, name: 'Chicken Shrimp',imageSrc:image1 , price: 'USD 30.00',number:'Order no. 340534', description: '2 Plates and sauce on the sides'
 },
+{
+    id: 5, name: 'Chicken Shrimp',imageSrc:image1 , price: 'USD 30.00',number:'Order no. 340534', description: '2 Plates and sauce on the sides'
+},
+{
+    id: 5, name: 'Chicken Shrimp',imageSrc:image1 , price: 'USD 30.00',number:'Order no. 340534', description: '2 Plates and sauce on the sides'
+},
 
 
 ]

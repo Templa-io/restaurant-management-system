@@ -7,13 +7,17 @@ import { BrowserRouter } from 'react-router-dom';
 import { StateProvider } from './context/StateProvider';
 import reducer from './context/reducer';
 import { initialState } from './context/initialState';
+import NiceModal from '@ebay/nice-modal-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <StateProvider initialState={initialState} reducer={reducer}>
    <React.StrictMode>
+   <NiceModal.Provider>
     <App />
+   </NiceModal.Provider>
+   
   </React.StrictMode>
   </StateProvider>
   </BrowserRouter>

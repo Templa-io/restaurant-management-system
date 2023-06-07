@@ -9,7 +9,6 @@ import CustomerComponents from './subComponents/CustomerComponents'
 const CustomerList = () => {
   return (
     <div className='Hero'>
-    
     <div className='Hero-left'>
      <LeftComponent/>
     </div>
