@@ -91,3 +91,42 @@ border: 1px solid #E6EEFF ;
     padding-top: 12px;
   }
 
+  .image-container {
+    position: relative;
+    width: 200px; /* Adjust the desired constant size */
+    height: 200px; /* Adjust the desired constant size */
+    overflow: hidden;
+  }
+  
+  .uploaded-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .delete-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px; /* Adjust the desired constant size */
+    height: 300px; /* Adjust the desired constant size */
+
+    padding: 10px;
+  }
+  
+  .placeholder-image {
+    width: 20px;
+  }

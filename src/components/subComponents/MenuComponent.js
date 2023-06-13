@@ -2,40 +2,9 @@ import React from 'react'
 import './MenuComponent.css'
 import image7 from '../../assets/Image (2).png'
 import Login from '../Login'
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
-import { app } from '../../firebase.config'
-import { useStateValue } from '../../context/StateProvider'
-import { useNavigate } from 'react-router-dom'
-import { actionType } from '../../context/reducer'
 
-const MenuComponent = ({user}) => {
+const MenuComponent = () => {
 
-  const firebaseAuth = getAuth(app);
-  const provider = new GoogleAuthProvider();
-  const [{ user: authUser }, dispatch] = useStateValue();
-  const navigate = useNavigate();
-
-  const login = async () => {
-    if (!authUser) {
-      const { user: { refreshToken, providerData } } = await signInWithPopup(firebaseAuth, provider);
-      dispatch({
-        type: actionType.SET_USER,
-        user: providerData[0],
-      });
-      localStorage.setItem('user', JSON.stringify(providerData[0]));
-    } else {
-      // Handle menu toggle logic if needed
-    }
-  };
-
-  const logout = () => {
-    localStorage.clear();
-    navigate('login');
-    dispatch({
-      type: actionType.SET_USER,
-      user: null,
-    });
-  };
 
   const isMenu = true;
 
@@ -46,11 +15,11 @@ const MenuComponent = ({user}) => {
     <div><span>My Menu.</span></div>
     <div className='box'>
     <div className='profile'>
-    <div>{user ? user.displayName : "Admin"}</div>
-    <div>{user ? user.email : "admin@gmail.com"}</div>
+    <div>"Admin"</div>
+    <div> "admin@gmail.com"</div>
         </div>
       
-        <img src={user ? user.photoURL : image7} alt='userProfile' onClick={Login}/>
+        <img src={image7} alt='userProfile' onClick={Login}/>
      
 
    </div>

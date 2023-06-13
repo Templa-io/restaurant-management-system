@@ -8,16 +8,78 @@ import CreateComponent from './subComponents/CreateComponent'
 
 
 const CreateMenu = () => {
-
-    const [imageAsset, setImageAsset] = useState(null)
+  const [imageAsset, setImageAsset] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
     const [price, setPrice] = useState("")
     const [description, setDescription] = useState("")
-    const [fields, setFields] = useState(false)
     const [alertStatus, setAlertStatus] = useState("danger")
     const [msg, setMsg] = useState(null)
     const [title, setTitle] = useState("")
+    const [error, setError] = useState("")
 
+    const handleDeleteImage = () => {
+      setImageAsset(null);
+    };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    
+    
+      // Perform input format validation
+  if (isNaN(parseFloat(price))) {
+    setError('Price must be a valid number.');
+    return;
+  }
+
+  if (title.length < 3 || title.length > 50) {
+    setError('Title length must be between 3 and 50 characters.');
+    return;
+  }
+
+  if (description.length < 10 || description.length > 200) {
+    setError('Description length must be between 10 and 200 characters.');
+    return;
+  }
+
+  // Reset the error state
+  setError('');
+    
+      // Make the API request
+      const requestData = {
+        name: title,
+        description: description,
+        menuImage: imageAsset,
+      };
+    
+          
+          // Reset the form fields and loading state
+          setImageAsset(null);
+          setTitle('');
+          setDescription('');
+          setPrice('');
+          setIsLoading(false);
+
+    };
+    
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+
+    if (!file) {
+      // No file selected, handle the error
+      return;
+    }
+  
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif']; // Add more allowed file types if needed
+    if (!allowedTypes.includes(file.type)) {
+      // Invalid file type, handle the error
+      return;
+    }
+
+    setImageAsset(file);
+  };
+
+  
   return (
     <div className='Hero'>
     <div className='Hero-left'>
@@ -69,24 +131,30 @@ const CreateMenu = () => {
        className='custom-input1'/>
       </div>
       <div><label className='label'> Image </label></div>
-     <div className='img-box1'>
-  
-      <div className=' w-full flex flex-col items-center justify-center cursor-pointer'>
-      <div className='w-full h-full flex flex-col items-center' >
-      <img src={image1} alt='' width="20px"/>
-      <div>Attach an image </div>
-      </div>
-      <input className="w-0 h-0"
-      type="file"
-      name="uploadimage"
-      accept="image/*" 
+      {imageAsset ? (
+              <div className="img-box1">
+                <div className="image-container">
+                  <img src={URL.createObjectURL(imageAsset)} alt="Uploaded Image" className="uploaded-image" />
+                  <button type="button" className="delete-image" onClick={handleDeleteImage}>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ) : null}
+
+            {!imageAsset && (
+              <div className="img-box1">
+                <div className="upload-placeholder">
+                  <img src={image1} alt="" className="placeholder-image" />
+                  <div>Attach an image</div>
+                </div>
+                <input className="w-0 h-0" type="file" name="uploadimage" accept="image/*" onChange={handleImageUpload} />
+              </div>
+            )}
     
-      />
-      </div>
-      </div>
     
      <div className="btn2" >
-     <button type="button" className="custom-btn2" >Create</button>
+     <button type="button" className="custom-btn2" onClick={handleSubmit}>Create</button>
      </div>
   
    </form>  

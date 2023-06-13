@@ -26,7 +26,7 @@ const MenuList = ({ data }) => {
 
     <NiceModal.Provider>
     </NiceModal.Provider>
-    <div className='Active-orders overflow-y-scroll scrollbar-hide scroll-sm '>
+    <div className='Active-orders overflow-y-auto scrollbar-hide '>
     {menuData && 
       menuData.map((item) =>(
 

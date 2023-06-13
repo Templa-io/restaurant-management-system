@@ -5,7 +5,7 @@
     width: 100%;
 }
 .Left{
-    flex:3;
+    flex:2;
     background-image: url(../assets/img.png);
     background-size:cover;
     background-position: center;
@@ -31,7 +31,7 @@
     flex-direction: column;
     color: white;
     padding-left: 1rem;
-    z-index: 2;
+    z-index: 3;
     font-size: 15px;
     align-items: flex-start;
    
@@ -49,7 +49,7 @@
 }
 
 .hero-blur{
-width: 54%;
+width: 45%;
 height: 12rem;
 bottom: 0;
 left: 0;
@@ -70,13 +70,17 @@ left: 0;
 }
 .Right{
     display: flex;
-    flex:2 1;
+    flex-direction: column;
+    flex: 2;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    right: 2rem;
+margin-left: -8rem;
     
 }
 .signin {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     border-radius: 0 0 10px 10px;
     gap: 20px;
@@ -89,7 +93,7 @@ left: 0;
     border-radius: 10px;
     padding: 0.8vw;
     outline: none;
-    width: 25rem;
+    width: 26rem;
   }
   .btn{
     background-color: black;
@@ -113,7 +117,7 @@ left: 0;
   label{
     color: gray;
 font-size: 12px;
-padding-bottom: 5px;
+margin-bottom: -1rem;
   }
 
 
@@ -128,3 +132,13 @@ padding-bottom: 5px;
     flex-direction: column;
     align-items: flex-start;
   }
+ .error{
+  font-size: 12px;
+  color: red;
+  margin-left: 5rem;
+align-self: center;
+ }
+ .text{
+  margin-left: 3rem;
+  padding-bottom: 1rem;
+ }

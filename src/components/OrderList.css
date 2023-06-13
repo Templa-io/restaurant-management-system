@@ -57,7 +57,10 @@ line-height: 16px;
     background: #F4F3F34D;
     border-radius: 20px;
     height:42rem;
+    box-sizing: border-box;
+    min-height: 100%;
     gap: 20px;
+    overflow: scroll;
     width: 100%;
    
 }

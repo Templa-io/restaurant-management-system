@@ -6,10 +6,17 @@ import image4 from '../assets/Ellipse 67.png'
 import image5 from '../assets/Ellipse 68.png'
 import image6 from '../assets/Ellipse 69.png'
 import './LeftComponent.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
-const LeftComponent = () => {
+const LeftComponent = (props) => {
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+       navigate('/')
+      };
+
+
   return (
   
    <div className='Hero-left'>
@@ -40,6 +47,7 @@ const LeftComponent = () => {
             </Link>
             
         </div>
+        <button className='logout' type='button' onClick={handleLogout}>Logout</button>
         </div>   
         <div className='box1'>
         <div className='menu'>

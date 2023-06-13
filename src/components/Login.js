@@ -1,30 +1,67 @@
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Link, useNavigate, useNavigation } from 'react-router-dom'
-import {auth} from "../firebase.config"
+import axios from 'axios';
+import swal from "sweetalert";
+import { setUserSession } from "../utils/Common";
 
-const Login = () => {
 
-  const [email, setEmail] = useState('');
+const Login = (props) => {
+
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+   const [error, setError] =useState(null)
+   const [loading, setLoading] = useState(false)
+   const navigate = useNavigate()
 
-  const Login = (e) => {
-    e.preventDefault();
-    const auth = getAuth
-
-    // Check if the entered email and password match the default cred
-    if (email === 'test@gmail.com' && password === 'testpassword')
-    {
-      //if true navigate to dashboard
-      console.log()
-      navigate('home')
-    }else{
-      //otherwise display error
-      console.error("Invalid email or password:");
+   useEffect(() => {
+    // Check if the user is already logged in
+    const token = localStorage.getItem('token');
+    const user = localStorage.getItem('user');
+    if (token && user) {
+      // Redirect the user to the home page
+      navigate('/home');
     }
-  }
+  }, [navigate]);
+
+   const handleLogin = () => {
+    setError(null);
+
+    // Validate input fields
+    if (username.trim() === '') {
+      setError('Username is required');
+      return;
+    }
+    if (password.trim() === '') {
+      setError('Password is required');
+      return;
+    }
+
+      setError(null);
+setLoading(true);
+axios.post("http://34.230.46.179:8080/api/v1/auth/login", {
+username:username,
+password: password
+}).then(response => {
+setLoading(false);
+setUserSession(response.data.token, response.data.user)
+navigate('/home');
+})// ...
+
+.catch(error => {
+ setLoading(false);
+ if (error.response && (error.response.status === 401 || error.response.status === 400)) {
+   setError(error.response.data.message);
+ } else {
+   setError("Username or Password is wrong.");
+ }
+ console.error('error >>>', error);
+})
+
+
+   }
+  
 
   return (
     <div className='Login'>
@@ -42,31 +79,35 @@ const Login = () => {
              </div>
   
         </div><div className='blur hero-blur'></div>
-        <div className='Right'>
+        <div className='Right '>
             
-            
-        <form onSubmit={Login} className="signin">
             <span className='text'>Login</span>
-            <div>
-                <label htmlFor='email'>Username or Email</label>
+            <div className="signin">
+              <label htmlFor='username'>Username or Email</label>
                 <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+                autoComplete="off" // Disable autofill for the username input field
                 />
-            </div>
-           <div><label htmlFor='password'>Password</label>
-                <input
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                </div>
-                <div><input type={"submit"} value="LOGIN" className="btn" /></div>
-              </form>
+           <label htmlFor="password">Password</label>
+           <input
+           type="password"
+           required
+           value={password}
+           onChange={e => setPassword(e.target.value)}
+           autoComplete="new-password" 
+           /> 
+           {error && <div className='error'>{error}</div>}
+           <input 
+           type='button'
+           className="btn"
+           value={loading ? " Loading..." : "Login"}
+           disabled={loading}
+           onClick={handleLogin}
+           />
         </div>
+    </div>
     </div>
   )
 }

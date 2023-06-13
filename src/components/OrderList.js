@@ -21,8 +21,8 @@ const OrderList = () => {
    <div className='container12'>
    <div className='Active-orders overflow-y-scroll scrollbar-hide scroll-smooth'>
    {orderData && orderData.map(n =>(
-    <motion.div 
-    whileHover={{scale : 1.1}}
+    <div 
+   
     key={n.id} className='details'>
     
     <img src={n.imageSrc} alt="image1"/>
@@ -36,16 +36,18 @@ const OrderList = () => {
   
    <div>{n.description}</div>
    </div>
-       <div className='section-btn'>
+       <motion.div
+       whileHover={{scale : 1.1}}
+        className='section-btn'>
     <Link>
     <div className='confirm-btn'>Confirm</div>
     </Link>
    <Link>
      <div className='decline-btn'>Decline</div>
    </Link>
-   </div>
+   </motion.div>
  
-    </motion.div>
+    </div>
    ))}
    
    </div>

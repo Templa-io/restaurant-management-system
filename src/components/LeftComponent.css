@@ -188,3 +188,10 @@ a:active {
    
     transform: translateY(4px);
   }
+  .logout{
+    background-color: transparent;
+    border: 1px solid gray;
+    width: 4rem;
+    font-size: 12px;
+    margin-top: 2rem;
+  }
