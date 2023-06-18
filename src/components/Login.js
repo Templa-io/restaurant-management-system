@@ -16,7 +16,7 @@ const Login = (props) => {
    const navigate = useNavigate()
 
    useEffect(() => {
-    // Check if the user is already logged in
+    //b Check if the user is already logged in
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
     if (token && user) {
@@ -40,7 +40,7 @@ const Login = (props) => {
 
       setError(null);
 setLoading(true);
-axios.post("http://34.230.46.179:8080/api/v1/auth/login", {
+axios.post("https://restaurant.patadesign.com", {
 username:username,
 password: password
 }).then(response => {
