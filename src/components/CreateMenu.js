@@ -104,7 +104,7 @@ const CreateMenu = () => {
       <div>Create Menu.</div>
       <form>
       <div>
-       <label className='label' > Name</label>
+       <div className='label' > Name</div>
       <input 
       type="text" 
       required 
@@ -113,7 +113,7 @@ const CreateMenu = () => {
       className='custom-input1'/>
       </div>
       <div>
-       <label className='label'>Description </label>
+       <div className='label'>Description </div>
       <textarea className='textarea' typeof='text' 
       rows={4} cols={40} 
       required  
@@ -122,7 +122,7 @@ const CreateMenu = () => {
         )}/>
       </div>
       <div>
-      <label className='label'> Price </label>
+      <div className='label'> Price </div>
       <input 
       type="text" 
       required 

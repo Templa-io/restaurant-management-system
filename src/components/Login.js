@@ -9,7 +9,7 @@ import { setUserSession } from "../utils/Common";
 
 const Login = (props) => {
 
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
    const [error, setError] =useState(null)
    const [loading, setLoading] = useState(false)
@@ -29,8 +29,8 @@ const Login = (props) => {
     setError(null);
 
     // Validate input fields
-    if (username.trim() === '') {
-      setError('Username is required');
+    if (email.trim() === '') {
+      setError('Email is required');
       return;
     }
     if (password.trim() === '') {
@@ -40,8 +40,8 @@ const Login = (props) => {
 
       setError(null);
 setLoading(true);
-axios.post("https://restaurant.patadesign.com", {
-username:username,
+axios.post("https://restaurant.patadesign.com/api/v1/auth/login", {
+email:email,
 password: password
 }).then(response => {
 setLoading(false);
@@ -54,7 +54,7 @@ navigate('/home');
  if (error.response && (error.response.status === 401 || error.response.status === 400)) {
    setError(error.response.data.message);
  } else {
-   setError("Username or Password is wrong.");
+   setError("Email or Password is wrong.");
  }
  console.error('error >>>', error);
 })
@@ -83,11 +83,11 @@ navigate('/home');
             
             <span className='text'>Login</span>
             <div className="signin">
-              <label htmlFor='username'>Username or Email</label>
+              <label htmlFor='email'>Username or Email</label>
                 <input
                 type="text"
-                value={username}
-                onChange={e => setUsername(e.target.value)}
+                value={email}
+                onChange={e => setEmail(e.target.value)}
                 autoComplete="off" // Disable autofill for the username input field
                 />
            <label htmlFor="password">Password</label>

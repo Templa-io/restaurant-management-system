@@ -1,21 +1,13 @@
 import React, { useState } from 'react'
 import './CreateComponent.css'
 import image1 from '../../assets/gallery.png'
-import { Controller, useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
-import Loader from './Loader'
-import { storage } from '../../firebase.config'
 
-import {DeleteFontIcon} from '@react-md/material-icons'
 
 
 
 
 const CreateComponent = () => {
 
-
-  const [imageAsset, setImageAsset] = useState(null)
-  const [isLoading, setIsLoading] = useState(false)
   const [price, setPrice] = useState("")
   const [description, setDescription] = useState("")
   const [fields, setFields] = useState(false)
