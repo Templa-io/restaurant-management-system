@@ -16,7 +16,7 @@ const CustomerList = () => {
       try{
       const response = await fetch('https://restaurant.patadesign.com/api/v1/user/users',{
          headers:{
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4NzI1NDI1OSwiZXhwIjoxNjg3MjU2MDU5fQ.eDW8D2wojODK2riaHUCqyX4sXg9GlzYlcr7eBd5m9HM'
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4NzI3NTIxOCwiZXhwIjoxNjg3Mjc3MDE4fQ.sbxYMBhM_sw6jv0sZlas36P7gQiLXH4Sog4Y4P0Rltw'
       }
       });
      const jsonData = await response.json();
@@ -43,7 +43,7 @@ const CustomerList = () => {
 <div className='email-order '>
 <motion.div key={user.id} 
 className='hover:cursor-pointer hover:bg-gray-100'
-whileTap={{scale:0.7}}
+whileTap={{scale:0.9}}
 >
 <div className='ppic'></div>
 <div className='names'>
@@ -52,29 +52,6 @@ whileTap={{scale:0.7}}
 
 </div>
 </motion.div>
-  <motion.div key={user.id} 
-  className='hover:cursor-pointer hover:bg-gray-100'
-  whileTap={{scale:0.7}}
-  >
-  <div className='ppic' ></div>
-  <div className='names'>
-  <div>{user.firstName} {user.lastName}</div>
-  <div>{user.email}</div>
-  
-  </div>
-  </motion.div>
-  <motion.div key={user.id} 
-  className='hover:cursor-pointer hover:bg-gray-100'
-  whileTap={{scale:0.7}}
-  >
-  <div className='ppic'></div>
-  <div className='names'>
-  <div>{user.firstName} {user.lastName}</div>
-  <div>{user.email}</div>
-  
-  </div>
-  </motion.div>
- 
 
   </div>
     ))}
