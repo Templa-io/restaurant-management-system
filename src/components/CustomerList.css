@@ -1,20 +1,24 @@
 
 .email-order{
+    display: flex;
     align-self: flex-start;
+    justify-content: space-between;
+    gap: 20rem;
 
 }
+
 .email-order > div {
     display: flex;
     gap: 24px;
     padding-bottom: 2rem;
+    width: 18rem;
 }
 .email-order > div:nth-child(2) {
 
-    padding-left: 5rem;
+    width: 18rem;
 }
 .email-order > div:nth-child(3) {
 
-    padding-left: 5rem;
 }
 
 .ppic {
@@ -64,7 +68,6 @@ border-radius: 5rem;
 .customer-profile{
     display: flex;
     flex-direction: column;
-    justify-content: ce;
     align-items: center;
     margin-top: 2rem;
     
@@ -98,4 +101,7 @@ margin-top: 12px;
 .order-btn:hover {
 background-color: orange;
 color: black;
+}
+.id{
+    align-items: flex-start;
 }

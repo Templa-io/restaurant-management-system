@@ -33,7 +33,7 @@ const CreateComponent = () => {
     <div>Create Menu.</div>
     <form>
     <div>
-     <label className='label' > Name</label>
+     <div className='label' > Name</div>
     <input 
     type="text" 
     required 
@@ -42,7 +42,7 @@ const CreateComponent = () => {
     className='custom-input'/>
     </div>
     <div>
-     <label className='label'>Description </label>
+     <div className='label'>Description </div>
     <textarea typeof='text' 
     rows={4} cols={40} 
     required  
@@ -51,7 +51,7 @@ const CreateComponent = () => {
       )}/>
     </div>
     <div>
-    <label className='label'> Price </label>
+    <div className='label'> Price </div>
     <input 
     type="text" 
     required 
