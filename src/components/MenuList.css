@@ -9,7 +9,6 @@
     background-color:#EAEAEA ;
     }
     .Span-section{
-        position: relative;
         display: flex;
         flex-direction: column;
          text-align: left;

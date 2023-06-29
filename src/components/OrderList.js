@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './OrderList.css'
 
 import LeftComponent from './LeftComponent'
 import ComponentRight from '../components/subComponents/ComponentRight'
 import { orderData } from './data/OrderData'
 import image1 from '../assets/Rectangle 121.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {motion} from 'framer-motion'
 
 
 const OrderList = () => {
+const navigate =useNavigate();
+
+useEffect(() => {
+  const email=sessionStorage.getItem('email');
+  if(email==='' || email === null){
+    navigate('/orderList')
+  }
+}, [])
+
   return (
     <div className='Hero'>
     

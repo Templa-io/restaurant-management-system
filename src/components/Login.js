@@ -14,53 +14,55 @@ const Login = (props) => {
    const [error, setError] =useState(null)
    const [loading, setLoading] = useState(false)
    const navigate = useNavigate()
+  
+
 
    useEffect(() => {
     //b Check if the user is already logged in
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
     if (token && user) {
+
+         // Store the token in localStorage
+         localStorage.setItem('token', token);
+         console.log('Token:', token);
+
       // Redirect the user to the home page
       navigate('/home');
     }
   }, [navigate]);
 
-   const handleLogin = () => {
+  const handleLogin = async () => {
     setError(null);
-
-    // Validate input fields
-    if (email.trim() === '') {
-      setError('Email is required');
-      return;
-    }
-    if (password.trim() === '') {
-      setError('Password is required');
-      return;
-    }
-
-      setError(null);
-setLoading(true);
-axios.post("https://restaurant.patadesign.com/api/v1/auth/login", {
-email:email,
-password: password
-}).then(response => {
-setLoading(false);
-setUserSession(response.data.token, response.data.user)
-navigate('/home');
-})// ...
-
-.catch(error => {
- setLoading(false);
- if (error.response && (error.response.status === 401 || error.response.status === 400)) {
-   setError(error.response.data.message);
- } else {
-   setError("Email or Password is wrong.");
- }
- console.error('error >>>', error);
-})
-
-
-   }
+    setLoading(true);
+  
+    axios
+      .post("https://restaurant.patadesign.com/api/v1/auth/login", {
+        email: email,
+        password: password
+      })
+      .then(response => {
+        setLoading(false);
+        const { token } = response.data; // Extract the token from the response data
+        setUserSession(token, response.data.user);
+  
+        // Store the token in localStorage
+        localStorage.setItem('token', token);
+        console.log('Token:', token);
+  
+        // Redirect the user to the desired page (e.g., '/home')
+        navigate('/home');
+      })
+      .catch(error => {
+        setLoading(false);
+        if (error.response && (error.response.status === 401 || error.response.status === 400)) {
+          setError(error.response.data.message);
+        } else {
+          setError("Email or Password is wrong.");
+        }
+        console.error('error >>>', error);
+      });
+  };
   
 
   return (

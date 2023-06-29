@@ -9,11 +9,23 @@ import './LeftComponent.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 
-const LeftComponent = (props) => {
+const LeftComponent = ({menuData, error}) => {
     const navigate = useNavigate()
+    
+
 
     const handleLogout = () => {
        navigate('/')
+      };
+      
+      const handleMenuButtonClick = () => {
+        if (error && error.includes('Authentication failed')) {
+          navigate('/emptyMenu');
+        }else if (menuData && menuData.length > 0) {
+          navigate('/menuList');
+        } else {
+          navigate('/emptyMenu');
+        }
       };
 
 
@@ -36,7 +48,7 @@ const LeftComponent = (props) => {
         <div>
             <img src={image2} alt=''/>
             <Link to = "/menuList">
-            <div>Menus</div>
+            <div onClick={handleMenuButtonClick}>Menus</div>
             </Link>
             
         </div>

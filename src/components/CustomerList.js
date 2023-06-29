@@ -14,10 +14,11 @@ const CustomerList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try{
+        const token = localStorage.getItem('token'); // Retrieve token from localStorage
       const response = await fetch('https://restaurant.patadesign.com/api/v1/user/users',{
-         headers:{
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4NzI3NTIxOCwiZXhwIjoxNjg3Mjc3MDE4fQ.sbxYMBhM_sw6jv0sZlas36P7gQiLXH4Sog4Y4P0Rltw'
-      }
+        headers: {
+          'Authorization': `Bearer ${token}` // Pass the token in the headers
+        }
       });
      const jsonData = await response.json();
      console.log(jsonData)

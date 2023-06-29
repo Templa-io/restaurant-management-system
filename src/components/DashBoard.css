@@ -4,21 +4,20 @@
     height: 38rem;
     min-height: 31rem;
     max-height: 30rem;
-    padding: 2px;
+    padding: 12px;
     border-radius: 12px;
-    background-color:#EAEAEA ;
-    justify-content: flex-start;
+    background-color:#EAEAEA ;padding-right: 4rem;
     }
 
 .Dish-section2 > img{
-    position: relative;
+   align-self: center;
     width: 25rem;
-    left: -10%;
+   
     
 }
 .Span-section1{
-    position: relative;
     display: flex;
+    margin-top: -3rem;
     flex-direction: column;
      text-align: left;
      top: -30%;
@@ -51,8 +50,7 @@ text-align: left;
     display: flex;
     align-items:end;
     gap: 2rem;
-    padding-top:5rem;
-    margin-bottom:0 auto;
+    margin-top: 4rem;
 }
 
 .delete-btn{
