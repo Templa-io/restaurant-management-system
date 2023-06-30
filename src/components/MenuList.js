@@ -85,7 +85,7 @@ const MenuList = (props) => {
         <MenuComponent />
         <div className='container'>
           {showDashBoard ? (
-            <div className='Active-orders overflow-y-auto scrollbar-hide'>
+            <div className='Active-orders overflow-y-auto scrollbar-hide '>
               <DashBoard
               key={selectedItem.id}
                 id={selectedItem.id}

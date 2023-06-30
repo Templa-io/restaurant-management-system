@@ -19,13 +19,22 @@ const LeftComponent = ({menuData, error}) => {
       };
       
       const handleMenuButtonClick = () => {
+
+        
         if (error && error.includes('Authentication failed')) {
+     
           navigate('/emptyMenu');
         }else if (menuData && menuData.length > 0) {
           navigate('/menuList');
+           window.location.reload(true); // Refresh the page
         } else {
           navigate('/emptyMenu');
         }
+      };
+
+      const handleCustomersButtonClick = () => {
+        navigate('/customerList');
+        window.location.reload(true); // Refresh the page
       };
 
 
@@ -55,7 +64,7 @@ const LeftComponent = ({menuData, error}) => {
         <div>
             <img src={image3} alt='' />
             <Link to = "/customerList">
-            <div>Customers</div>
+            <div onClick={handleCustomersButtonClick}>Customers</div>
             </Link>
             
         </div>

@@ -20,7 +20,7 @@ const CreateMenu = () => {
   const [loading, setLoading] = useState(false)
   const [fields, setFields] = useState(false);
 
-  const navigate= useNavigate
+  const navigate= useNavigate()
 
   const handleDeleteImage = () => {
     setImageAsset(null);
@@ -68,7 +68,11 @@ setIsLoading(true);
     } catch (error) {
       console.error('Error:', error);
 
-      setError('An error occurred while creating the menu. Please try again.');
+      setError('Attarch image.');
+      setTimeout(() => {
+        setFields(false);
+        setMsg(null);
+      }, 3000);
     navigate('/menuList')
     }
   };

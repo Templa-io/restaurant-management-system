@@ -22,6 +22,7 @@ const DashBoard = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false); 
   const [loading, setLoading] = useState(false)
+  const [fields, setFields] = useState(false);
 
 
   const handleDelete = async (id) => {
@@ -56,6 +57,10 @@ const DashBoard = (props) => {
     } catch (error) {
       // Handle the network or parsing error
       setError('Error deleting menu');
+      setTimeout(() => {
+        setFields(false);
+        setError(null);
+      }, 3000);
       console.log('Error deleting menu:', error);
     }
   };
@@ -207,14 +212,9 @@ const DashBoard = (props) => {
               ) : (
                 <div className='img-box1'> 
                 <div className='upload-placeholder flex flex-col'>
-                <div >Attach an image</div>  </div>
-                {!isEditing && showImageBox && (
-        
-                  
-                   
+                <div >Attach an image</div> 
+                {!isEditing && showImageBox && (  
                     <img src={image1} alt='' className='placeholder-image' />
-                
-               
               )}
                   <input
                     className='w-0 h-0 mx-auto'
@@ -223,8 +223,10 @@ const DashBoard = (props) => {
                     accept='image/*'
                     onChange={handleImageUpload}
                   />
+                  </div>
                 </div>
-              )}
+              )} 
+              
             </div>
             <div className='btn2'>
               <button type='submit' className='custom-btn2'>
@@ -238,7 +240,7 @@ const DashBoard = (props) => {
           <div className='Dish-section2'>
             <img src={props.imageUrl} alt='' />
             <div className='Span-section1'>
-              <div>{props.name}</div>
+              <div className='pt-4'>{props.name}</div>
               <div>{props.description}</div>
               <div>${props.price}</div>
               <div className='Dish-btn'>

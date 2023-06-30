@@ -16,7 +16,7 @@ const CreateComponent = () => {
    const [error, setError] = useState('');
    const [loading, setLoading] = useState(false)
 
-   const navigate= useNavigate
+   const navigate= useNavigate()
 
    const handleDeleteImage = () => {
      setImageAsset(null);
@@ -25,6 +25,7 @@ const CreateComponent = () => {
    const handleSubmit = async (e) => {
      e.preventDefault();
      setLoading(true)
+     
  
      // Create a FormData object to store the form data
      const formData = new FormData();
@@ -36,11 +37,17 @@ const CreateComponent = () => {
      try {
       const token = localStorage.getItem('token'); // Retrieve token from localStorage
        // Make the API request
-       const response = await axios.post('https://restaurant.patadesign.com/api/v1/menu/create', formData, {
+       const response = await axios.post('https://restaurant.patadesign.com/api/v1/menu/create', 
+       formData, {
         headers: {
           'Authorization': `Bearer ${token}` // Pass the token in the headers
         },
        });
+       if (!imageAsset) {
+        setError('Please upload an image.');
+        return;
+      }
+      
  
        console.log('Response:', response.data);
 
@@ -66,7 +73,11 @@ const CreateComponent = () => {
      } catch (error) {
        console.error('Error:', error);
        setLoading(false)
-       setError('An error occurred while creating the menu. Please try again.');
+       setError('Attarch Image');
+       setTimeout(() => {
+        setFields(false);
+        setError(null);
+      }, 3000);
      navigate('/menuList')
      
      }
@@ -96,6 +107,11 @@ const CreateComponent = () => {
 
   return (
     <div className='Order-details'>
+    {error && (
+      <div className="error-alert">
+        {error}
+      </div>
+    )}
       {fields && (
         <p
           className={`w-full p-2 rounded-lg text-center text-lg font-semibold 
@@ -155,7 +171,9 @@ const CreateComponent = () => {
         {!imageAsset && (
           <div className="img-box">
             <div className="upload-placeholder">
+
               <img src={image1} alt="" className="placeholder-image" />
+              
               <div>Attach an image</div>
             </div>
             <input className="w-0 h-0" type="file" name="uploadimage" accept="image/*" onChange={handleImageUpload} />

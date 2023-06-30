@@ -15,6 +15,7 @@
 .Dish-section2 > img{
    align-self: center;
     width: 25rem;
+    border-radius: 16px;
    
     
 }
