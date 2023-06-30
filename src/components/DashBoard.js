@@ -68,6 +68,8 @@ const DashBoard = (props) => {
 
       if (response.status === 200) {
         console.log('Menu updated successfully');
+         // Call the onUpdateMenu callback function with the updated menu
+  props.onUpdateMenu(response.data);
       } else {
         setError('Error updating menu');
         console.log('Error updating menu:', response.statusText);

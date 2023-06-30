@@ -38,6 +38,19 @@ const MenuList = () => {
     setShowDashBoard(true);
   };
 
+  const handleMenuUpdate = (updatedMenu) => {
+    // Find the index of the updated menu in the menuData array
+    const updatedIndex = menuData.findIndex(menu => menu.id === updatedMenu.id);
+  
+    if (updatedIndex !== -1) {
+      // Update the menuData array with the updated menu
+      const updatedData = [...menuData];
+      updatedData[updatedIndex] = updatedMenu;
+  
+      // Update the menuData state
+      setMenuData(updatedData);
+    }
+  };
   return (
     <div className='Hero'>
       <div className='Hero-left'>
@@ -57,6 +70,8 @@ const MenuList = () => {
                 imageUrl={selectedItem.imageUrl}
                 price={selectedItem.price}
                 menuData={menuData}
+                onUpdateMenu={handleMenuUpdate} // Pass the callback function as a prop
+
               />
             </div>
           ) : (
