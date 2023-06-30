@@ -15,7 +15,7 @@ const DashBoard = (props) => {
   const [imageAsset, setImageAsset] = useState(null);
   const [menuImage, setMenuImage] = useState('');
   const [showDashboard, setShowDashboard] = useState(true); // New state variable
-  
+  const [showImageBox, setShowImageBox] = useState(true); // New state variable
 
   const handleDelete = async (id) => {
     try {
@@ -34,6 +34,7 @@ const DashBoard = (props) => {
     setDescription(props.description);
     setPrice(props.price);
     setMenuImage(props.imageUrl);
+    setShowImageBox(false);
   };
 
   const handleSubmit = async (e) => {
@@ -79,6 +80,7 @@ const DashBoard = (props) => {
       setMenuImage('');
       setIsEditing(false);
       setShowDashboard(true);
+      setShowImageBox(true);
     } catch (error) {
       setError('Error updating menu');
       console.log('Error updating menu:', error);
@@ -107,103 +109,107 @@ const DashBoard = (props) => {
   return (
     <div>
       {isEditing ? (
-        <div className='Active-orders'>
-       
-            <div className='Order-details1'>
-              <div>Edit Menu.</div>
-              <form onSubmit={handleSubmit}>
-                <div>
-                  <div className='label'>Name</div>
-                  <input
-                    type='text'
-                    required
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className='custom-input1'
-                  />
-                </div>
-                <div>
-                  <div className='label'>Description</div>
-                  <textarea
-                    className='textarea'
-                    typeof='text'
-                    rows={4}
-                    cols={40}
-                    required
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <div className='label'>Price</div>
-                  <input
-                    type='number'
-                    required
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                    className='custom-input1'
-                  />
-                </div>
-                <div>
-                  <label className='label'>Image</label>
-                  {imageAsset ? (
-                    <div className='img-box1'>
-                      <div className='image-container'>
-                        <img
-                          src={URL.createObjectURL(imageAsset)}
-                          alt='Uploaded Image'
-                          className='uploaded-image'
-                        />
-                        <button type='button' className='delete-image' onClick={handleDeleteImage}>
-                          Delete
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className='img-box1'>
-                      <div className='upload-placeholder'>
-                        <img src={image1} alt='' className='placeholder-image' />
-                        <div>Attach an image</div>
-                      </div>
-                      <input
-                        className='w-0 h-0 mx-auto'
-                        type='file'
-                        name='menuImage'
-                        accept='image/*'
-                        onChange={handleImageUpload}
-                      />
-                    </div>
-                  )}
-                </div>
-                <div className='btn2'>
-                  <button type='submit' className='custom-btn2'>
-                    Update
-                  </button>
-                </div>
-              </form>
+        <div className='Order-details1'>
+          <div className='text-left'>Edit Menu.</div>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <div className='label'>Name</div>
+              <input
+                type='text'
+                required
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className='custom-input1'
+              />
             </div>
-          
+            <div>
+              <div className='label'>Description</div>
+              <textarea
+                className='textarea'
+                typeof='text'
+                rows={4}
+                cols={40}
+                required
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </div>
+            <div>
+              <div className='label'>Price</div>
+              <input
+                type='number'
+                required
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className='custom-input1 mb-3'
+              />
+            </div>
+            <div>
+              <label className='label mb-3'>Image</label>
+              {imageAsset ? (
+                <div className='img-box1'>
+                  <div className='image-container'>
+                    <img
+                      src={URL.createObjectURL(imageAsset)}
+                      alt='Uploaded Image'
+                      className='uploaded-image'
+                    />
+                    <button type='button' className='delete-image' onClick={handleDeleteImage}>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className='img-box1'> 
+                <div className='upload-placeholder flex flex-col'>
+                <div >Attach an image</div> 
+                {!isEditing && showImageBox && (
+        
+                  
+                   
+                    <img src={image1} alt='' className='placeholder-image' />
+                
+               
+              )}
+                  <input
+                    className='w-0 h-0 mx-auto'
+                    type='file'
+                    name='menuImage'
+                    accept='image/*'
+                    onChange={handleImageUpload}
+                  />
+                   </div>
+                </div>
+              )}
+            </div>
+            <div className='btn2'>
+              <button type='submit' className='custom-btn2'>
+                Update
+              </button>
+            </div>
+          </form>
         </div>
       ) : (
         showDashboard && (
-        <div className='Dish-section2'>
-          <img src={props.imageUrl} alt='' />
-          <div className='Span-section1'>
-            <div>{props.name}</div>
-            <div>{props.description}</div>
-            <div>${props.price}</div>
-            <div className='Dish-btn'>
-              <div className='edit-btn cursor-pointer' onClick={handleEdit}>
-                Edit
-              </div>
-              <div className='delete-btn cursor-pointer' onClick={() => handleDelete(props.id)}>
-                Delete
+          <div className='Dish-section2'>
+            <img src={props.imageUrl} alt='' />
+            <div className='Span-section1'>
+              <div>{props.name}</div>
+              <div>{props.description}</div>
+              <div>${props.price}</div>
+              <div className='Dish-btn'>
+                <div className='edit-btn cursor-pointer' onClick={handleEdit}>
+                  Edit
+                </div>
+                <div className='delete-btn cursor-pointer' onClick={() => handleDelete(props.id)}>
+                  Delete
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )
+        )
       )}
+      
     </div>
   );
 };

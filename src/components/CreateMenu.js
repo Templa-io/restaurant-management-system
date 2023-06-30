@@ -130,7 +130,7 @@ const CreateMenu = () => {
               <div>
                 <div className='label'>Price</div>
                 <input
-                  type='text'
+                  type='number'
                   required
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
