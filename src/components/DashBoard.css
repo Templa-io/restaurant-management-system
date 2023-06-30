@@ -6,7 +6,10 @@
     max-height: 30rem;
     padding: 12px;
     border-radius: 12px;
-    background-color:#EAEAEA ;padding-right: 4rem;
+    background-color:#EAEAEA ;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  
     }
 
 .Dish-section2 > img{
@@ -17,7 +20,6 @@
 }
 .Span-section1{
     display: flex;
-    margin-top: -3rem;
     flex-direction: column;
      text-align: left;
      top: -30%;

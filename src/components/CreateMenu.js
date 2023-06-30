@@ -36,13 +36,13 @@ const CreateMenu = () => {
 
     try {
       setIsLoading(true);
-
+      const token = localStorage.getItem('token'); // Retrieve token from localStorage
+    
       // Make the API request
       const response = await axios.post('https://restaurant.patadesign.com/api/v1/menu/create', formData, {
         headers: {
-          'Content-Type': 'multipart/form-data', // Set the content type for multipart form data
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4Nzc3MTkxMywiZXhwIjoxNzAzMzIzOTEzfQ.h4EkRrs019Yb4Gni_TqhFFJ4L1HT1zTk5ZcfRdDoDmU'
-        },
+          'Authorization': `Bearer ${token}` // Pass the token in the headers
+        }
       });
 
       console.log('Response:', response.data);
@@ -55,6 +55,7 @@ const CreateMenu = () => {
       setMenuImage('');
     } catch (error) {
       console.error('Error:', error);
+
       setError('An error occurred while creating the menu. Please try again.');
     navigate('/menuList')
     }

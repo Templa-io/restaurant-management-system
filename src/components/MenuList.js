@@ -50,6 +50,7 @@ const MenuList = () => {
           {showDashBoard ? (
             <div className='Active-orders overflow-y-auto scrollbar-hide'>
               <DashBoard
+              key={selectedItem.id}
                 id={selectedItem.id}
                 name={selectedItem.name}
                 description={selectedItem.description}
