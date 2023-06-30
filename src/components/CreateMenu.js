@@ -17,6 +17,8 @@ const CreateMenu = () => {
   const [title, setTitle] = useState('');
   const [menuImage, setMenuImage] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false)
+  const [fields, setFields] = useState(false);
 
   const navigate= useNavigate
 
@@ -26,7 +28,7 @@ const CreateMenu = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+setIsLoading(true);
     // Create a FormData object to store the form data
     const formData = new FormData();
     formData.append('name', title);
@@ -35,7 +37,7 @@ const CreateMenu = () => {
     formData.append('price', price);
 
     try {
-      setIsLoading(true);
+      
       const token = localStorage.getItem('token'); // Retrieve token from localStorage
     
       // Make the API request
@@ -53,6 +55,16 @@ const CreateMenu = () => {
       setDescription('');
       setPrice('');
       setMenuImage('');
+      setLoading(false); // Stop loading
+       // Show success message
+       setMsg('Menu created successfully');
+       setAlertStatus('success');
+       setFields(true);
+       setTimeout(() => {
+         setFields(false);
+         setMsg(null);
+       }, 3000);
+       window.location.reload(true); // Refresh the page
     } catch (error) {
       console.error('Error:', error);
 
@@ -162,8 +174,10 @@ const CreateMenu = () => {
               )}
 
               <div className='btn2'>
-                <button type='submit' className='custom-btn2'>
-                  Create
+                <button type='submit'
+                 className='custom-btn2'
+                 disabled={loading} value={loading ? " Loading..." : "Create"}>
+                 {loading ? " Loading..." : "Create"}
                 </button>
               </div>
             </form>

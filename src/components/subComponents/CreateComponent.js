@@ -14,6 +14,7 @@ const CreateComponent = () => {
   const [menuImage, setMenuImage] = useState(null);
   const [imageAsset, setImageAsset] = useState(null);
    const [error, setError] = useState('');
+   const [loading, setLoading] = useState(false)
 
    const navigate= useNavigate
 
@@ -23,6 +24,7 @@ const CreateComponent = () => {
  
    const handleSubmit = async (e) => {
      e.preventDefault();
+     setLoading(true)
  
      // Create a FormData object to store the form data
      const formData = new FormData();
@@ -41,15 +43,29 @@ const CreateComponent = () => {
        });
  
        console.log('Response:', response.data);
- 
+
+
        // Reset the form fields and loading state
+       setLoading(true)
        setImageAsset(null);
        setTitle('');
        setDescription('');
        setPrice('');
        setMenuImage('');
+
+       setLoading(false); // Stop loading
+       // Show success message
+       setMsg('Menu created successfully');
+       setAlertStatus('success');
+       setFields(true);
+       setTimeout(() => {
+         setFields(false);
+         setMsg(null);
+       }, 3000);
+       window.location.reload(true); // Refresh the page
      } catch (error) {
        console.error('Error:', error);
+       setLoading(false)
        setError('An error occurred while creating the menu. Please try again.');
      navigate('/menuList')
      
@@ -147,8 +163,10 @@ const CreateComponent = () => {
         )}
 
         <div className='btn2'>
-          <button type='submit' className='custom-btn'>
-            Create
+          <button type='submit' className='custom-btn' 
+          value={loading ? " Loading..." : "Create"} 
+           disabled={loading} >
+           {loading ? " Loading..." : "Create"}
           </button>
         </div>
       </form>

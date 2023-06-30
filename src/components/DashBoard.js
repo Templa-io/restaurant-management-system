@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './DashBoard.css';
 import image1 from '../assets/Rectangle 121.png';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { ModalDef } from '@ebay/nice-modal-react';
+
+
 
 const DashBoard = (props) => {
   const navigate = useNavigate();
@@ -16,13 +19,42 @@ const DashBoard = (props) => {
   const [menuImage, setMenuImage] = useState('');
   const [showDashboard, setShowDashboard] = useState(true); // New state variable
   const [showImageBox, setShowImageBox] = useState(true); // New state variable
+  const [showModal, setShowModal] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false); 
+  const [loading, setLoading] = useState(false)
+
 
   const handleDelete = async (id) => {
     try {
-      // ...
-      // Your existing handleDelete code here
-      // ...
+      const token = localStorage.getItem('token'); // Retrieve token from localStorage
+      const response = await axios.delete(`https://restaurant.patadesign.com/api/v1/menu/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.status === 200) {
+        // Handle the successful deletion
+        setLoading(true);
+        console.log('Menu deleted successfully');
+        const updatedMenuData = menuData.filter((menu) => menu.id !== id);
+        setMenuData(updatedMenuData);
+        setShowDashboard(false);
+        setShowModal(true);
+        // Set the flag to show delete alert
+        window.location.reload(true); // Refresh the page
+         setIsDeleted(true);
+        setTimeout(() => {
+          setIsDeleted(false); // Reset the flag after some time
+        }, 3000);
+        
+      } else {
+        // Handle the error response
+        setError('Error deleting menu');
+        console.log('Error deleting menu:', response.statusText);
+      }
     } catch (error) {
+      // Handle the network or parsing error
       setError('Error deleting menu');
       console.log('Error deleting menu:', error);
     }
@@ -35,6 +67,7 @@ const DashBoard = (props) => {
     setPrice(props.price);
     setMenuImage(props.imageUrl);
     setShowImageBox(false);
+    
   };
 
   const handleSubmit = async (e) => {
@@ -68,8 +101,7 @@ const DashBoard = (props) => {
 
       if (response.status === 200) {
         console.log('Menu updated successfully');
-         // Call the onUpdateMenu callback function with the updated menu
-  props.onUpdateMenu(response.data);
+        window.location.reload(true); // Refresh the page
       } else {
         setError('Error updating menu');
         console.log('Error updating menu:', response.statusText);
@@ -107,9 +139,20 @@ const DashBoard = (props) => {
   const handleDeleteImage = () => {
     setImageAsset(null);
   };
+  useEffect(() => {
+   
+  }, []);
+
+  const closeModal = () => {
+    setShowModal(false);
+    window.location.reload(true); // Refresh the page
+  };
 
   return (
     <div>
+    {isDeleted && (
+      <div className="alert success-alert bg-black text-white p-4 ">Item deleted successfully.</div>
+    )}
       {isEditing ? (
         <div className='Order-details1'>
           <div className='text-left'>Edit Menu.</div>
@@ -164,7 +207,7 @@ const DashBoard = (props) => {
               ) : (
                 <div className='img-box1'> 
                 <div className='upload-placeholder flex flex-col'>
-                <div >Attach an image</div> 
+                <div >Attach an image</div>  </div>
                 {!isEditing && showImageBox && (
         
                   
@@ -180,7 +223,6 @@ const DashBoard = (props) => {
                     accept='image/*'
                     onChange={handleImageUpload}
                   />
-                   </div>
                 </div>
               )}
             </div>
@@ -203,14 +245,15 @@ const DashBoard = (props) => {
                 <div className='edit-btn cursor-pointer' onClick={handleEdit}>
                   Edit
                 </div>
-                <div className='delete-btn cursor-pointer' onClick={() => handleDelete(props.id)}>
+                <div className='delete-btn cursor-pointer' value={loading ? " Loading..." : "Delete"} onClick={() => handleDelete(props.id)}>
                   Delete
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         )
       )}
+      
       
     </div>
   );

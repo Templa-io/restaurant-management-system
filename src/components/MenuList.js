@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import DashBoard from './DashBoard';
 import axios from 'axios';
 
-const MenuList = () => {
+const MenuList = (props) => {
   const [menuData, setMenuData] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showDashBoard, setShowDashBoard] = useState(false);
@@ -25,6 +25,7 @@ const MenuList = () => {
         });
 
         setMenuData(response.data.content);
+       
       } catch (error) {
         // Handle error
       }
@@ -40,17 +41,40 @@ const MenuList = () => {
 
   const handleMenuUpdate = (updatedMenu) => {
     // Find the index of the updated menu in the menuData array
-    const updatedIndex = menuData.findIndex(menu => menu.id === updatedMenu.id);
+    const updatedIndex = menuData.findIndex((menu) => menu.id === updatedMenu.id);
   
     if (updatedIndex !== -1) {
       // Update the menuData array with the updated menu
       const updatedData = [...menuData];
       updatedData[updatedIndex] = updatedMenu;
+      props.setMenuData(updatedData)
   
       // Update the menuData state
       setMenuData(updatedData);
     }
   };
+
+  const handleDelete = async (id) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.delete(`https://restaurant.patadesign.com/api/v1/menu/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.status === 200) {
+        console.log('Menu deleted successfully');
+        props.handleDelete(id); // Call the handleDelete function passed from the parent component
+      } else {
+        console.log('Error deleting menu:', response.statusText);
+      }
+    } catch (error) {
+      console.log('Error deleting menu:', error);
+    }
+  };
+
+  
   return (
     <div className='Hero'>
       <div className='Hero-left'>
@@ -71,7 +95,7 @@ const MenuList = () => {
                 price={selectedItem.price}
                 menuData={menuData}
                 onUpdateMenu={handleMenuUpdate} // Pass the callback function as a prop
-
+ZZ
               />
             </div>
           ) : (
