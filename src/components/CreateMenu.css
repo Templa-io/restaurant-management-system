@@ -84,7 +84,6 @@ border: 1px solid #E6EEFF ;
 .Order-details1 > div:nth-child(1){
     font-weight: bold;
     font-size: 18px;
-    width: 1rem;
     margin-top: -1rem;
     padding-left: 20rem;
     align-self: flex-start;
