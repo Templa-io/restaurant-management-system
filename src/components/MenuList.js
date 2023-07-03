@@ -6,12 +6,32 @@ import CreateComponent from './subComponents/CreateComponent';
 import { motion } from 'framer-motion';
 import DashBoard from './DashBoard';
 import axios from 'axios';
+import ReactPaginate from 'react-paginate';
+
 
 const MenuList = (props) => {
   const [menuData, setMenuData] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showDashBoard, setShowDashBoard] = useState(false);
   const [error, setError] = useState(null);
+
+  const [currentItems, setCurrentItems] = useState(null);
+  const[pageCount, setPageCount] = useState(0);
+  const[itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 6
+
+  useEffect(() => {
+
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(menuData.slice(itemOffset, endOffset));
+    setPageCount (Math.ceil(menuData.length / itemsPerPage));
+    },[itemOffset,itemsPerPage, menuData])
+    
+    const handlePageClick = (event) => {
+      const newOffset = (event.selected * itemsPerPage) % menuData.length;
+      setItemOffset(newOffset);
+    };
+    
 
   useEffect(() => {
     const fetchData = async () => {
@@ -99,11 +119,11 @@ ZZ
               />
             </div>
           ) : (
-            <div className='Active-orders overflow-y-auto scrollbar-hide '>
-              {Array.isArray(menuData) &&
-                menuData.map((menu, index) => (
-                  <div key={index}>
-                    <div onClick={() => { handleChange(index) }}>
+            <div className='Active-orders scrollbar-hide '>
+            <div className='flex flex-wrap h-full'>
+             {Array.isArray(currentItems) && 
+                currentItems.map((menu, index) => (
+                    <div key={index} onClick={() => handleChange(index)} className='hover:cursor-pointer'>
                       <motion.div
                         whileTap={{ scale: 0.75 }}
                         key={menu.id}
@@ -120,8 +140,26 @@ ZZ
                         </div>
                       </motion.div>
                     </div>
-                  </div>
+                 
                 ))}
+            </div> 
+           
+             
+                <ReactPaginate
+                  breakLabel="..."
+                  nextLabel="next >"
+                  onPageChange={handlePageClick}
+                  pageRangeDisplayed={3}
+                  pageCount={pageCount}
+                  previousLabel="< previous"
+                  renderOnZeroPageCount={null}
+                  containerClassName="pagination"
+                  pageLinkClassName="page-num"
+                  previousClassName="page-num"
+                  nextLinkClassName="page-num"
+                  activeClassName="Acyive"
+                />
+        
             </div>
           )}
 

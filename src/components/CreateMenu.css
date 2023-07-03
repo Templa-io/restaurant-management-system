@@ -79,6 +79,7 @@ border: 1px solid #E6EEFF ;
     border-radius: 20px;
     width: 100%;
     height: 47rem;
+    max-height: 47rem;
     gap: 20px;
 }
 .Order-details1 > div:nth-child(1){

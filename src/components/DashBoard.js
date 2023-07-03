@@ -240,7 +240,7 @@ const DashBoard = (props) => {
           <div className='Dish-section2'>
             <img src={props.imageUrl} alt='' />
             <div className='Span-section1'>
-              <div className='pt-4'>{props.name}</div>
+              <div className='pt-'>{props.name}</div>
               <div>{props.description}</div>
               <div>${props.price}</div>
               <div className='Dish-btn'>
