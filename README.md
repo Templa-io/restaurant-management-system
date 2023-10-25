@@ -41,7 +41,7 @@ This project is licensed under the [license name](LICENSE.md) - see the [LICENSE
 
 ## Documentation
 
-For detailed information, please refer to our [Google Slides Presentation]([https://eu.docworkspace.com/d/sICSpqdPCAeykgakG](https://docs.google.com/presentation/d/1EP9kVpYb-Z4eYcUsEtKxh3yojC5PyQVLtv0JThAFI_I/edit?usp=sharing)).
+For detailed information, please refer to our [Google Slides Presentation](https://docs.google.com/presentation/d/1EP9kVpYb-Z4eYcUsEtKxh3yojC5PyQVLtv0JThAFI_I/edit?usp=sharing).
 
 ## App Deployment
 
