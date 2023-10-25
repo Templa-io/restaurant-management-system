@@ -120,7 +120,7 @@ ZZ
             </div>
           ) : (
             <div className='Active-orders scrollbar-hide '>
-            <div className='flex flex-wrap h-full'>
+            <div className='flex flex-wrap '>
              {Array.isArray(currentItems) && 
                 currentItems.map((menu, index) => (
                     <div key={index} onClick={() => handleChange(index)} className='hover:cursor-pointer'>

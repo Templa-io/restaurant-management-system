@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import image1 from '../assets/shape2.png'
 import image2 from '../assets/shape.png'
 import image3 from '../assets/shape1.png'
@@ -9,8 +9,12 @@ import './LeftComponent.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 
+
 const LeftComponent = ({menuData, error}) => {
     const navigate = useNavigate()
+    const [activeButton, setActiveButton] = useState(true);
+    
+
     
 
 
@@ -30,11 +34,18 @@ const LeftComponent = ({menuData, error}) => {
         } else {
           navigate('/emptyMenu');
         }
+        setActiveButton('menus');
       };
 
       const handleCustomersButtonClick = () => {
         navigate('/customerList');
         window.location.reload(true); // Refresh the page
+        setActiveButton('customers');
+      };
+      const handleOrdersButtonClick = () => {
+        navigate('/orderList');
+        window.location.reload(true); // Refresh the page
+        setActiveButton('orders');
       };
 
 
@@ -48,7 +59,14 @@ const LeftComponent = ({menuData, error}) => {
             <div>
                  <img src={image1} alt='' />
                  <Link to = "/orderList">
-                 <div> Orders</div>
+                 <div
+                 onClick={handleOrdersButtonClick}
+                 className={` ${
+                   activeButton === 'orders' ? 'text-black' : 'text-blue-gray'
+                 }`}
+               >
+                 Orders
+               </div>
                  </Link>
             
             <div className='num'>0</div>
@@ -57,14 +75,28 @@ const LeftComponent = ({menuData, error}) => {
         <div>
             <img src={image2} alt=''/>
             <Link to = "/menuList">
-            <div onClick={handleMenuButtonClick}>Menus</div>
+            <div
+              onClick={handleMenuButtonClick}
+              className={` ${
+                activeButton === 'menus' ? 'text-black' : 'text-blue-gray '
+              }`}
+            >
+              Menus
+            </div>
             </Link>
             
         </div>
         <div>
             <img src={image3} alt='' />
             <Link to = "/customerList">
-            <div onClick={handleCustomersButtonClick}>Customers</div>
+            <div
+              onClick={handleCustomersButtonClick}
+              className={` ${
+                activeButton === 'customers' ? 'text-black' : 'text-blue-gray'
+              }`}
+            >
+              Customers
+            </div>
             </Link>
             
         </div>

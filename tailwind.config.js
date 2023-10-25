@@ -4,6 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
     theme: {
+      extend: {
+        colors: {
+          'blue-gray': '#8E97B6',
+        },
+      },
     screens: {
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }

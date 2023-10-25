@@ -15,7 +15,7 @@ const CustomerList = () => {
   const [currentItems, setCurrentItems] = useState(null);
   const[pageCount, setPageCount] = useState(0);
   const[itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6
+  const itemsPerPage = 10
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +24,7 @@ const CustomerList = () => {
       const response = await fetch('https://restaurant.patadesign.com/api/v1/user/users',{
         headers: {
           'Authorization': `Bearer ${token}` // Pass the token in the headers
+          
         }
       });
      const jsonData = await response.json();
