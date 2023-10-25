@@ -1,6 +1,6 @@
 # Restaurant Management System (RMS)
 
-![RMS Image](./src/assets/Login Page.png) 
+![RMS Image](../src/assets/Login Page.png) 
 
 ## Table of Contents
 - [Introduction](#introduction)
