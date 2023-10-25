@@ -1,7 +1,6 @@
 # Restaurant Management System (RMS)
 
-![RMS Image](./resources/your_image_filename.jpg) 
-<!-- Replace "your_image_filename.jpg" with the actual image file name and extension -->
+![RMS Image](./src/assets/Login Page.png) 
 
 ## Table of Contents
 - [Introduction](#introduction)
